@@ -19,9 +19,29 @@ class Access extends CI_Controller
      * map to /index.php/welcome/<method_name>
      * @see https://codeigniter.com/userguide3/general/urls.html
      */
+
     public function login()
     {
         $this->session->sess_destroy();
         $this->load->view('access/login');
+    }
+
+    public function oAuth()
+    {
+        if ($_GET['token'] != null) {
+            //set session
+            $this->session->set_userdata(
+                array(
+                    'TOKEN' => $_GET['token'],
+                    'USER_NAME' =>  $_GET['user_name'],
+                    'USER_EMAIL' =>  $_GET['user_email'],
+                    'USER_TYPE' =>  $_GET['user_type'],
+                )
+            );
+
+            redirect(base_url('./SystemSetup/dashboard'));
+        }
+
+        //redirect to System setup Dashboard
     }
 }

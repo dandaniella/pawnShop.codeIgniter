@@ -1,48 +1,40 @@
-// $(function () {
-//     //this fucttion is called once the file is loaded
-//     //$("#username").val();
-//     //$("input[name=username]").val();
-
-
-//     // this fucntion is triggered when the form has button type submit
-//     $("#form_id").on("submit",function (e){
-//         alert("form is submitted");
-//     })
-
-//     $("#submit_btn").click(function(e){
-//         alert("button is cliked!");
-//     });
-
-
-    
-// });
-
-
 $(function () {
     $.validator.setDefaults({
       submitHandler: function () {
-        // alert( "Form successful submitted!" );
-        {
+        
           $.ajax({
-            url: baseURL + "login",
+            url: apiURL + "login",
             type: "POST",
             data : {
               user_email : $("#username").val(), 
               user_password : $('#password').val(),
             },
-            datatype: "json", 
-            success: function(data) {
+            dataType: "json", 
+            success: function(data){
               console.log(data);
+              
+              localStorage.setItem("TOKEN", data.token)
+             
+              // save session data in php
+              let session_data = "";
+
+              session_data += "token=" + data.token;
+              session_data += "&user_name=" + data.data.user_name;
+              session_data += "&user_email=" + data.data.user_email;
+              session_data += "&user_type=" + data.data.user_type;
+              window.location.replace( baseURL + "Access/oAuth?" + session_data);
+              
             },
             error: function({responseJSON}){
               console.log(responseJSON);
+              _toastr("error","",responseJSON.message.join());  
             },
           });
-        }
+        
       }
     });
 
-    ($('#form_id').validate({
+    $('#form_id').validate({
       rules: {
         username: {
           required: true,
@@ -78,5 +70,5 @@ $(function () {
       unhighlight: function (element, errorClass, validClass) {
         $(element).removeClass('is-invalid');
       }
-    }));
+    });
   });

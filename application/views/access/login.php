@@ -10,10 +10,17 @@
 
     <link rel="stylesheet" href="<?php echo base_url('plugins') ?>/fontawesome-free/css/all.min.css">
 
+    <link rel="stylesheet" href="<?php echo base_url('plugins') ?>/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+
+    <link rel="stylesheet" href="<?php echo base_url('plugins') ?>/toastr/toastr.min.css">
+
     <link rel="stylesheet" href="<?php echo base_url('plugins') ?>/icheck-bootstrap/icheck-bootstrap.min.css">
 
     <link rel="stylesheet" href="<?php echo base_url('dist') ?>/css/adminlte.min.css?v=3.2.0">
-    <script nonce="5882914a-0533-46fa-a132-622dbe228f2b">
+
+
+
+    <!-- <script nonce="5882914a-0533-46fa-a132-622dbe228f2b">
         (function(w, d) {
             ! function(a, e, t, r) {
                 a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = {
@@ -48,7 +55,7 @@
                 }, ["complete", "interactive"].includes(e.readyState) ? zaraz.init() : a.addEventListener("DOMContentLoaded", zaraz.init)
             }(w, d, 0, "script");
         })(window, document);
-    </script>
+    </script> -->
 </head>
 
 <body class="hold-transition login-page">
@@ -118,7 +125,13 @@
     <script src="<?php echo base_url('plugins') ?>/jquery-validation/jquery.validate.min.js"></script>
     <script src="<?php echo base_url('plugins') ?>/jquery-validation/additional-methods.min.js"></script>
 
+    <!-- SweetAlert2 -->
+    <script src="<?php echo base_url('plugins') ?>/sweetalert2/sweetalert2.min.js"></script>
+    <!-- Toastr -->
+    <script src="<?php echo base_url('plugins') ?>/toastr/toastr.min.js"></script>
+
     <script src="<?php echo base_url('dist') ?>/js/common.js"></script>
+
     <!-- custom  js  -->
     <script src="<?php echo base_url('dist') ?>/js/access/login.js"></script>
 </body>

@@ -26,16 +26,19 @@ class SystemSetup extends CI_Controller
 		($this->session->userdata('TOKEN')) ? null : redirect('/');
 	}
 
-	public function index()
+	public function dashboard()
 	{
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar');
 		$this->load->view('template/body');
 		$this->load->view('template/footer');
 	}
-	public function start()
+
+	public function user()
 	{
 		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('pages/user_management/user');
 		$this->load->view('template/footer');
 	}
 }
