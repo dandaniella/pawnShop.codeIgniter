@@ -121,7 +121,7 @@
     <script src="<?php echo base_url('plugins') ?>/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script src="<?php echo base_url('dist') ?>/js/adminlte.min.js?v=3.2.0"></script>
-
+    <!-- validate -->
     <script src="<?php echo base_url('plugins') ?>/jquery-validation/jquery.validate.min.js"></script>
     <script src="<?php echo base_url('plugins') ?>/jquery-validation/additional-methods.min.js"></script>
 

@@ -29,9 +29,20 @@
                     <a class="nav-link nav-link active" style="text-align:center;" href="#">Contact Us</a>
                 </li>
 
+
+
+                <!-- log in -->
+
+                <!-- <li class="nav-item">
+                    <a class="nav-link nav-link active" href="../Access/login" style="text-align:center;" role="button" data-bs-toggle="modal" data-bs-target="#LoginModal">Login</a>
+                </li> -->
+
                 <li class="nav-item">
-                    <a class="nav-link nav-link active" href="#" style="text-align:center;" role="button" data-bs-toggle="modal" data-bs-target="#LoginModal">Login</a>
+                    <a class="nav-link nav-link active" href="./Access/login" style="text-align:center;" role="button">Login</a>
                 </li>
+
+
+
 
                 <li class="nav-item">
                     <a class="nav-link nav-link active" style="text-align:center;" role="button" data-bs-toggle="modal" data-bs-target="#RegisterModal">Register</a>

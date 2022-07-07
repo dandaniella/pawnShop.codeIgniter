@@ -68,7 +68,7 @@
           </div>
           <div class="info">
 
-            <a href="#" class="d-block"><?php echo $this->session->userdata('USER_NAME') ?></a>
+            <a href="#" class="d-block"><?php echo $this->session->userdata('USER_TYPE') ?></a>
           </div>
         </div>
 

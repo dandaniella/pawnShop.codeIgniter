@@ -22,6 +22,7 @@ $(function () {
               session_data += "&user_name=" + data.data.user_name;
               session_data += "&user_email=" + data.data.user_email;
               session_data += "&user_type=" + data.data.user_type;
+              
               window.location.replace( baseURL + "Access/oAuth?" + session_data);
               
             },
@@ -70,5 +71,5 @@ $(function () {
       unhighlight: function (element, errorClass, validClass) {
         $(element).removeClass('is-invalid');
       }
-    });
+    }, );
   });

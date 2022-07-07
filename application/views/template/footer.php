@@ -24,6 +24,7 @@
 </script>
 <!-- Bootstrap 4 -->
 <script src="<?php echo base_url('plugins') ?>/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 <!-- DataTables  & Plugins -->
 <script src="<?php echo base_url('plugins') ?>/datatables/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url('plugins') ?>/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
@@ -58,14 +59,24 @@
 <script src="<?php echo base_url('plugins') ?>/bs-stepper/js/bs-stepper.min.js"></script>
 <!-- dropzonejs -->
 <script src="<?php echo base_url('plugins') ?>/dropzone/min/dropzone.min.js"></script>
+<!-- Toastr -->
+<script src="<?php echo base_url('plugins') ?>/toastr/toastr.min.js"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo base_url('dist') ?>/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url('dist') ?>/js/demo.js"></script>
+<!-- ph_cities -->
+<!-- <script src="<?php echo base_url('plugins') ?>/ph_cities/city.js"></script> -->
+<script src="<?php echo base_url('plugins') ?>/ph_cities/city.min.js"></script>
 
-<!-- custom  js  -->
+<!-- validate -->
+<script src="<?php echo base_url('plugins') ?>/jquery-validation/jquery.validate.min.js"></script>
+<script src="<?php echo base_url('plugins') ?>/jquery-validation/additional-methods.min.js"></script>
+
+
+<!-- custom  user -->
+<script src="<?php echo base_url('dist') ?>/js/common.js"></script>
 <script src="<?php echo base_url('dist') ?>/js/user_management/user.js"></script>
-
 
 </body>
 

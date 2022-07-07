@@ -1,5 +1,235 @@
+
+  
 $(function () {
-    
+  //first modal validation in user redential profile
+  val=$("#form-id1").validate({
+    rules: {
+      user_email: {
+        required: true,
+        email : true
+      },
+      user_password: {
+        required: true
+      },
+      user_type: {
+        required: true
+      },
+      user_name: {
+        required: true
+      },
+    },
+    messages: {
+      user_email: "Please accept our terms", 
+      user_password: "Please accept our terms", 
+      user_type: "Please accept our terms", 
+      user_name: "Please accept our terms"  
+    },
+  
+    errorElement: 'div',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.input-group').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    }
+  })
+
+ //Second and third modal valdiation in user employee profile and location
+  val2 =$("#form-id2").validate({
+    rules: {
+      first_name: {
+        required: true,
+      },
+      last_name: {
+        required: true
+      },
+      birth_date: {
+        required: true
+      },
+      sex: {
+        required: true
+      },
+      civil_status: {
+        required: true
+      },
+      contact_no: {
+        required: true
+      }
+    },
+    messages: {
+      first_name: "Please accept our terms", 
+      last_name: "Please accept our terms", 
+      birth_date: "Please accept our terms", 
+      sex: "Please accept our terms", 
+      civil_status: "Please accept our terms", 
+      contact_no: "Please accept our terms"
+    },
+  
+    errorElement: 'div',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.input-group').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    }
+  })
+  
+
+ //Second and third modal valdiation in user employee profile and location
+ val3 =$("#form-id3").validate({
+  rules: {
+    province: {
+      required: true,
+    },
+    city: {
+      required: true
+    },
+  },
+  messages: {
+    province: "Please accept our terms", 
+    city: "Please accept our terms", 
+  },
+
+  errorElement: 'div',
+  errorPlacement: function (error, element) {
+    error.addClass('invalid-feedback');
+    element.closest('.input-group').append(error);
+  },
+  highlight: function (element, errorClass, validClass) {
+    $(element).addClass('is-invalid');
+  },
+  unhighlight: function (element, errorClass, validClass) {
+    $(element).removeClass('is-invalid');
+  }
+})
+
+/*
+|--------------------------------------------------------------------------
+| Add user credential to database
+|--------------------------------------------------------------------------
+*/
+
+  $("#form-id1").on("submit", function(event){
+    event.preventDefault();
+    event.stopPropagation();
+   
+    if(val.errorList.length===0)
+    {
+      $.ajax({
+        url: apiURL + "user_credentials",
+        type: "POST",
+        data : 
+        {
+          user_email : $("#user_email").val(), 
+          user_password : $('#user_password').val(),
+          user_name : $('#user_name').val(),
+          user_type : $('#user_type').val()
+        },
+        dataType: "json", 
+        headers:{
+          Accept: "application/json", 
+          Authorization: "Bearer " + localStorage.getItem("TOKEN"),
+        },
+        // crossDomain:true,
+        success: function(data){
+          //saving the user_id to the local storage for referenc of the next form
+          localStorage.setItem("user_id", data.data.user_id);
+          _toastr("success","",data.message.join());
+          $("#modal1").modal('hide');
+          $("#modal2").modal().show();
+        },
+        error: function({responseJSON}){
+          console.log(responseJSON.message);
+          _toastr("error","",responseJSON.message.join());  
+        },
+      });
+      
+     
+    }
+  });
+
+/*
+|--------------------------------------------------------------------------
+| Add user profile to database
+|--------------------------------------------------------------------------
+*/
+
+  $("#form-id2").on("submit", function(event){
+    event.preventDefault();
+    event.stopPropagation();
+   console.log(localStorage.getItem("user_id"))
+    if(val2.errorList.length===0)
+    {
+      $("#modal2").modal('hide');
+      $("#modal3").modal().show();
+    }
+  })
+
+
+  
+  $("#form-id3").on("submit", function(event){
+    event.preventDefault();
+    event.stopPropagation();
+    console.log(localStorage.getItem("user_id"))
+    if(val3.errorList.length===0)
+    {
+      alert("wala pang ajax");
+    }
+  })
+  /*
+  |--------------------------------------------------------------------------
+  |  modal bottons
+  |--------------------------------------------------------------------------
+  */
+    //back button
+  $("#prev_modal").click(function(){
+    $("#modal3").modal('hide');
+    $("#modal2").modal().show();
+  });
+
+
+   /*
+  |--------------------------------------------------------------------------
+  | profile picture
+  |--------------------------------------------------------------------------
+  */
+  $("#profile_pic").change(function(){
+    readURL(this);
+  });
+
+
+
+
+  /*
+  |--------------------------------------------------------------------------
+  | Add user modal validation
+  |--------------------------------------------------------------------------
+  */
+
+  /*
+  |--------------------------------------------------------------------------
+  | modal prev button
+  |--------------------------------------------------------------------------
+  */
+  
+ 
+
+  $('#date_1').datetimepicker({
+    format: 'L'
+  });
+
+  $('#date_2').datetimepicker({
+    format: 'L'
+  });
+
     $("#example1").DataTable({
         "responsive": true, 
         "lengthChange": false, 
@@ -19,15 +249,16 @@ $(function () {
     
     // modal dropdown
     $('.js-example-basic-single').select2({
-      dropdownParent: $("#exampleModal")
+      dropdownParent: $("#modal3")
     })
-   
 
     //Initialize Select2 Elements
     $('.select2').select2({
       theme: 'bootstrap4',
-      dropdownParent: $("#exampleModal")
+      dropdownParent: $("#modal3")
     })
+
+   
 
     //Datemask dd/mm/yyyy
     $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
@@ -83,3 +314,24 @@ $(function () {
     })
 
   })
+
+
+  function readURL(input){
+    var url=input.value;
+    var ext=url.substring(url.lastIndexOf(".") + 1).toLowerCase();
+    if(
+        input.files &&
+        input.files[0]&&
+        (ext == "gif" || ext=="png" || ext=="jpeg" || ext == "jpg")
+    ){
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        $("#photo_path_placeholder").attr("src", e.target.result);
+      };
+      reader.readAsDataURL(input.files[0]);
+    }else{
+      //$("#img").attr("src", "/assets/no_preview.png");
+    }
+        
+  }
