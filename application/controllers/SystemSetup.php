@@ -20,17 +20,17 @@ class SystemSetup extends CI_Controller
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
 
-	function __construct()
-	{
-		parent::__construct();
-		($this->session->userdata('TOKEN')) ? null : redirect('/');
-	}
+	// function __construct()
+	// {
+	// 	parent::__construct();
+	// 	($this->session->userdata('TOKEN')) ? null : redirect('/');
+	// }
 
 	public function dashboard()
 	{
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar');
-		$this->load->view('pages/dashboard');
+		$this->load->view('template/body');
 		$this->load->view('template/footer');
 	}
 
@@ -126,9 +126,7 @@ class SystemSetup extends CI_Controller
 	{
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar');
-		$this->load->view('pages/employee');
+		$this->load->view('pages/user_management/employee');
 		$this->load->view('template/footer');
 	}
-
-	
 }

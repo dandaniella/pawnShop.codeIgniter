@@ -52,7 +52,7 @@
 						</div>
 					</div>
 					<div class="col-md-3">
-					<div class="card" style="background-color: #4C3A51;">
+					<div class="card" style="background-color: #D6D5A8;">
 							<div class="card-body">
 								<div class="label">
 									<label for="" class="form-label" style="color: white;">Placeholder</label>
@@ -71,7 +71,7 @@
 		<div class="card">
 			<div class="card-body">
 				<table id="example1" class="table table-bordered table-hover ">
-					<thead class="table-primary">
+					<thead class="table-secondary " >
 						<tr>
 							<th>Placeholder</th>
 							<th>Placeholder</th>
