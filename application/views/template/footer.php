@@ -26,11 +26,12 @@
 <script src=" <?php echo base_url('assets') ?>/libs/simplebar/simplebar.min.js"></script>
 <script src=" <?php echo base_url('assets') ?>/libs/node-waves/waves.min.js"></script>
 
-<script src=" <?php echo base_url('assets') ?>/js/app.js"></script>
+
 
 <!-- Required datatable js -->
 <script src="<?php echo base_url('assets') ?>/libs/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url('assets') ?>/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+
 <!-- Buttons examples -->
 <script src="<?php echo base_url('assets') ?>/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
 <script src="<?php echo base_url('assets') ?>/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
@@ -48,8 +49,15 @@
 <!-- Datatable init js -->
 <script src="<?php echo base_url('assets') ?>/js/pages/datatables.init.js"></script>
 
+<!-- toastr plugin -->
+<script src="assets/libs/toastr/build/toastr.min.js"></script>
+
+<!-- app js -->
+<script src=" <?php echo base_url('assets') ?>/js/app.js"></script>
+
 <!-- common js -->
 <script src="<?php echo base_url('assets') ?>/js/common.js"></script>
+
 <!-- user js -->
 <script src="<?php echo base_url('assets') ?>/js/user_management/user.js"></script>
 </body>

@@ -1,139 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Log in</title>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <meta charset="utf-8" />
+    <title>Login | Skote - Admin & Dashboard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="<?php echo base_url('assets') ?>/images/favicon.ico">
+    <!-- toastr -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets') ?>/libs/toastr/build/toastr.min.css">
 
-    <link rel="stylesheet" href="<?php echo base_url('plugins') ?>/fontawesome-free/css/all.min.css">
+    <!-- Bootstrap Css -->
+    <link href="<?php echo base_url('assets') ?>/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="<?php echo base_url('assets') ?>/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="<?php echo base_url('assets') ?>/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
 
-    <link rel="stylesheet" href="<?php echo base_url('plugins') ?>/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
-
-    <link rel="stylesheet" href="<?php echo base_url('plugins') ?>/toastr/toastr.min.css">
-
-    <link rel="stylesheet" href="<?php echo base_url('plugins') ?>/icheck-bootstrap/icheck-bootstrap.min.css">
-
-    <link rel="stylesheet" href="<?php echo base_url('dist') ?>/css/adminlte.min.css?v=3.2.0">
-
-
-
-    <!-- <script nonce="5882914a-0533-46fa-a132-622dbe228f2b">
-        (function(w, d) {
-            ! function(a, e, t, r) {
-                a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = {
-                    deferred: []
-                }, a.zaraz.q = [], a.zaraz._f = function(e) {
-                    return function() {
-                        var t = Array.prototype.slice.call(arguments);
-                        a.zaraz.q.push({
-                            m: e,
-                            a: t
-                        })
-                    }
-                };
-                for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e);
-                a.zaraz.init = () => {
-                    var t = e.getElementsByTagName(r)[0],
-                        z = e.createElement(r),
-                        n = e.getElementsByTagName("title")[0];
-                    for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) {
-                        const e = a.zaraz.q.shift();
-                        a.zarazData.q.push(e)
-                    }
-                    z.defer = !0;
-                    for (const e of [localStorage, sessionStorage]) Object.keys(e || {}).filter((a => a.startsWith("_zaraz_"))).forEach((t => {
-                        try {
-                            a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t))
-                        } catch {
-                            a.zarazData["z_" + t.slice(7)] = e.getItem(t)
-                        }
-                    }));
-                    z.referrerPolicy = "origin", z.src = "/cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t)
-                }, ["complete", "interactive"].includes(e.readyState) ? zaraz.init() : a.addEventListener("DOMContentLoaded", zaraz.init)
-            }(w, d, 0, "script");
-        })(window, document);
-    </script> -->
 </head>
 
-<body class="hold-transition login-page">
-    <div class="login-box">
-        <div class="login-logo">
-            <a href="../../index2.html"><b>e</b>PawnShop</a>
-        </div>
-
-        <div class="card">
-            <div class="card-body login-card-body">
-                <p class="login-box-msg">Sign in to start your session</p>
-                <form method="get" id="form_id" name="form_id" action="">
-                    <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Email" id="username" name="username">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-envelope"></span>
+<body>
+    <div class="account-pages my-5 pt-sm-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6 col-xl-5">
+                    <div class="card overflow-hidden">
+                        <div class="bg-primary bg-soft">
+                            <div class="row">
+                                <div class="col-7">
+                                    <div class="text-primary p-4">
+                                        <h5 class="text-primary">Welcome Back !</h5>
+                                        <p>Sign in to continue to Skote.</p>
+                                    </div>
+                                </div>
+                                <div class="col-5 align-self-end">
+                                    <img src="<?php echo base_url('assets') ?>/images/profile-img.png" alt="" class="img-fluid">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Password" id="password" name="password">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-8">
-                            <div class="icheck-primary input-group">
-                                <input type="checkbox" id="remember" name="remember">
-                                <label for="remember">
-                                    Remember Me
-                                </label>
-                            </div>
-                        </div>
+                        <div class="card-body pt-0">
+                            <div class="auth-logo">
+                                <a href="index.html" class="auth-logo-light">
+                                    <div class="avatar-md profile-user-wid mb-4">
+                                        <span class="avatar-title rounded-circle bg-light">
+                                            <img src="<?php echo base_url('assets') ?>/images/logo-light.svg" alt="" class="rounded-circle" height="34">
+                                        </span>
+                                    </div>
+                                </a>
 
-                        <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block" id="submit_btn">Sign In</button>
-                        </div>
+                                <a href="index.html" class="auth-logo-dark">
+                                    <div class="avatar-md profile-user-wid mb-4">
+                                        <span class="avatar-title rounded-circle bg-light">
+                                            <img src="<?php echo base_url('assets') ?>/images/logo.svg" alt="" class="rounded-circle" height="34">
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-2">
+                                <form class="form-horizontal" action="index.html" id="login_id">
 
+                                    <div class="mb-3">
+                                        <label for="username" class="form-label">Username</label>
+                                        <input type="text" class="form-control" id="user_email" name="user_email" placeholder="Enter email" data-parsley-required="true" parsley-type="email">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Password</label>
+                                        <div class="input-group auth-pass-inputgroup grid">
+                                            <div class="col">
+                                                <input type="password" class="form-control" placeholder="Enter password" aria-label="Password" aria-describedby="password-addon" id="user_password" name="user_password" data-parsley-required="true">
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-light " type="button"><i class="mdi mdi-eye-outline"></i></button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="remember-check">
+                                        <label class="form-check-label" for="remember-check">
+                                            Remember me
+                                        </label>
+                                    </div>
+
+                                    <div class="mt-3 d-grid">
+                                        <button class="btn btn-primary waves-effect waves-light" type="submit">Log In</button>
+                                    </div>
+
+                                    <div class="mt-3 d-grid">
+                                        <button class="btn btn-danger waves-effect waves-light" type="button">Sign in with Google</button>
+                                    </div>
+
+                                    <!-- <div class="mt-4 text-center">
+                                        <h5 class="font-size-14 mb-3">Sign in with</h5>
+
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <a href="javascript::void()" class="social-list-item bg-primary text-white border-primary">
+                                                    <i class="mdi mdi-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="javascript::void()" class="social-list-item bg-info text-white border-info">
+                                                    <i class="mdi mdi-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="javascript::void()" class="social-list-item bg-danger text-white border-danger">
+                                                    <i class="mdi mdi-google"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div> -->
+
+                                    <div class="mt-4 text-center">
+                                        <a href="auth-recoverpw.html" class="text-muted"><i class="mdi mdi-lock me-1"></i> Forgot your password?</a>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
                     </div>
-                </form>
-                <div class="social-auth-links text-center mb-3">
-                    <p>- OR -</p>
-                    <a href="#" class="btn btn-block btn-danger">
-                        <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
-                    </a>
+                    <div class="mt-5 text-center">
+
+                        <div>
+                            <p>Don't have an account ? <a href="auth-register.html" class="fw-medium text-primary"> Signup now </a> </p>
+                        </div>
+                    </div>
+
                 </div>
-
-                <p class="mb-1">
-                    <a href="forgot-password.html">I forgot my password</a>
-                </p>
             </div>
-
         </div>
     </div>
+    <!-- end account-pages -->
 
+    <!-- JAVASCRIPT -->
+    <script src="<?php echo base_url('assets') ?>/libs/jquery/jquery.min.js"></script>
+    <script src="<?php echo base_url('assets') ?>/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo base_url('assets') ?>/libs/metismenu/metisMenu.min.js"></script>
+    <script src="<?php echo base_url('assets') ?>/libs/simplebar/simplebar.min.js"></script>
+    <script src="<?php echo base_url('assets') ?>/libs/node-waves/waves.min.js"></script>
 
-    <script src="<?php echo base_url('plugins') ?>/jquery/jquery.min.js"></script>
+    <!-- App js -->
+    <script src="<?php echo base_url('assets') ?>/js/app.js"></script>
 
-    <script src="<?php echo base_url('plugins') ?>/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- parsley -->
+    <script src="assets/libs/parsleyjs/parsley.min.js"></script>
+    <!-- toastr plugin -->
+    <script src="<?php echo base_url('assets') ?>/libs/toastr/build/toastr.min.js"></script>
 
-    <script src="<?php echo base_url('dist') ?>/js/adminlte.min.js?v=3.2.0"></script>
+    <!-- common js -->
+    <script src="<?php echo base_url('assets') ?>/js/common.js"></script>
 
-    <script src="<?php echo base_url('plugins') ?>/jquery-validation/jquery.validate.min.js"></script>
-    <script src="<?php echo base_url('plugins') ?>/jquery-validation/additional-methods.min.js"></script>
+    <!-- login js -->
+    <script src="<?php echo base_url('assets') ?>/js/access/login.js"></script>
 
-    <!-- SweetAlert2 -->
-    <script src="<?php echo base_url('plugins') ?>/sweetalert2/sweetalert2.min.js"></script>
-    <!-- Toastr -->
-    <script src="<?php echo base_url('plugins') ?>/toastr/toastr.min.js"></script>
-
-    <script src="<?php echo base_url('dist') ?>/js/common.js"></script>
-
-    <!-- custom  js  -->
-    <script src="<?php echo base_url('dist') ?>/js/access/login.js"></script>
 </body>
 
 </html>
