@@ -37,11 +37,92 @@
     <div class="page-content">
         <div class="container-fluid">
             <div class="row">
-                <div class="d-sm-flex flex-wrap">
+                <div class="d-sm-flex flex-wrap mb-4">
+
                     <h4 class="card-title mb-4">Email Sent</h4>
+
                     <div class="ms-auto">
-                        <a class="nav-link" href="#">Add Employee</a>
+
+                        <!-- Add user modal Button -->
+                        <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            Add User Credentials
+                        </button>
+
+
+                        <!-- Modal add user cred -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content ">
+                                    <div class="modal-header col bg-primary">
+                                        <h5 class="modal-title text-white" id="staticBackdropLabel"><i class="fas fa-user-circle  fa-lg (33% increase) text-white"></i> &nbsp Add User Credential</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <form class="form-horizontal" action="index.html" id="login_id">
+                                        <div class="modal-body">
+
+
+                                            <div class="mb-3">
+                                                <label for="Email" class="form-label">Email</label>
+                                                <input type="text" class="form-control" id="user_email" name="user_email" placeholder="Enter email" data-parsley-required="true" parsley-type="email">
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label class="form-label">Password</label>
+                                                <div class="input-group auth-pass-inputgroup grid">
+                                                    <div class="col">
+                                                        <input type="password" class="form-control" placeholder="Enter password" aria-label="Password" aria-describedby="password-addon" id="user_password" name="user_password" data-parsley-required="true">
+                                                    </div>
+                                                    <div>
+                                                        <button class="btn btn-light " type="button"><i class="mdi mdi-eye-outline"></i></button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label class="form-label">Username</label>
+                                                <div class="input-group auth-pass-inputgroup grid">
+                                                    <div class="col">
+                                                        <input type="text" class="form-control" placeholder="Enter username" aria-label="username" id="user_name" name="user_name" data-parsley-required="true">
+                                                    </div>
+                                                    <div>
+                                                        <button class="btn btn-light " type="button"><i class="mdi mdi-eye-outline"></i></button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class=" col mb-3">
+                                                    <label class=" form-label">Single Select</label>
+
+
+
+                                                </div>
+                                                <div class="col">
+                                                    <select class="form-control select2  ">
+                                                        <option> Select asasasasas</option>
+                                                        <option value="AK">Alaska</option>
+                                                        <option value="HI">Hawaii</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+
                 </div>
 
                 <!-- start page title -->
@@ -68,6 +149,10 @@
                     </div> <!-- end col -->
                 </div> <!-- end row -->
                 <!-- end page title -->
+
+
+
+
 
             </div> <!-- container-fluid -->
         </div>

@@ -50,10 +50,20 @@
 <script src="<?php echo base_url('assets') ?>/js/pages/datatables.init.js"></script>
 
 <!-- toastr plugin -->
-<script src="assets/libs/toastr/build/toastr.min.js"></script>
+<script src="<?php echo base_url('assets') ?>/libs/toastr/build/toastr.min.js"></script>
+
+<!-- select 2 -->
+<script src="<?php echo base_url('assets') ?>/libs/select2/js/select2.min.js"></script>
+<!-- parsley -->
+<script src="<?php echo base_url('assets') ?>/libs/parsleyjs/parsley.min.js"></script>
+
+
+<!-- form advanced init -->
+<script src="<?php echo base_url('assets') ?>/js/pages/form-advanced.init.js"></script>
 
 <!-- app js -->
 <script src=" <?php echo base_url('assets') ?>/js/app.js"></script>
+
 
 <!-- common js -->
 <script src="<?php echo base_url('assets') ?>/js/common.js"></script>
