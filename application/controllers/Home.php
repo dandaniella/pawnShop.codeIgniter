@@ -22,6 +22,8 @@ class Home extends CI_Controller
 
     public function homepage()
     {
-        $this->load->view('homepage/home');
+        $this->load->view('homepage/homepage');
+        // $this->load->view('homepage/home');
+        // $this->load->view('homepage/assets_c/index');
     }
 }
