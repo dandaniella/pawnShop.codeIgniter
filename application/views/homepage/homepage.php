@@ -232,11 +232,12 @@
             <section id="about" class="s-about target-section">
 
                 <div class="row s-about__content" data-animate-block>
-                    <div class="column lg-12">
+                    <div class="column lg-12 ">
                         <h2 class="text-pretitle" data-animate-el>About Us</h2>
-                        <p class="s-about__desc" data-animate-el>
-                            <span>Infinity</span> is a creative digital agency based in Manila, Philippines.
-                            We are composed of creative designers and experienced developers.
+                        <p class="s-about__desc" style="font-size:4rem;" data-animate-el>
+                            <span>ePawn</span>
+                            an online pawnshop in the Philippines and thriving with the modernization of the pawnbroking industry in the country.
+                            Our goal is to provide the most convenient and reliable financial service to all Filipinos in need of quick cash loans.
                         </p>
                     </div> <!-- end column  -->
                 </div> <!-- end s-about__content  -->
@@ -246,7 +247,7 @@
 
             <!-- services
             ----------------------------------------------- -->
-            <section id="services" class="s-services">
+            <!-- <section id="services" class="s-services">
 
                 <div class="s-services__bg"></div>
 
@@ -258,8 +259,8 @@
 
                         <p class="lead">Lorem ipsum Elit ut consequat veniam eu nulla nulla reprehenderit reprehenderit sit velit in cupidatat ex aliquip ut cupidatat Excepteur tempor id irure sed dolore sint sunt voluptate ullamco nulla qui Duis qui culpa voluptate enim ea aute qui veniam in irure et nisi nostrud deserunt est officia minim.</p>
 
-                    </div> <!-- end column -->
-                </div> <!-- end section header -->
+                    </div> 
+                </div> 
 
                 <div class="s-services__content">
 
@@ -285,7 +286,7 @@
                                 </p>
                             </div>
 
-                        </div> <!-- end service-item -->
+                        </div> 
 
                         <div class="column service-item" data-animate-el>
 
@@ -307,7 +308,7 @@
                                 </p>
                             </div>
 
-                        </div> <!-- end service-item -->
+                        </div> 
 
                         <div class="column service-item" data-animate-el>
 
@@ -329,7 +330,7 @@
                                 </p>
                             </div>
 
-                        </div> <!-- end service-item -->
+                        </div> 
 
                         <div class="column service-item" data-animate-el>
 
@@ -351,13 +352,13 @@
                                 </p>
                             </div>
 
-                        </div> <!-- end service-item -->
+                        </div> 
 
-                    </div> <!-- end services-list -->
+                    </div> 
 
-                </div> <!-- end services-content -->
+                </div> 
 
-            </section> <!-- end services -->
+            </section> end services -->
 
 
             <!-- portfolio
@@ -369,14 +370,26 @@
                     <div class="row narrow section-header section-header--dark has-bottom-sep">
                         <div class="column lg-12">
 
-                            <h3 class="text-pretitle">Showcase</h3>
-                            <h1 class="text-display-title">See Our Featured Projects.</h1>
+                            <h3 class="text-pretitle">e-Pawn Items</h3>
+                            <h1 class="text-display-title" style="font-size: 5rem;">See Pawnable Items We Accept.</h1>
 
                             <p class="lead">
-                                Lorem ipsum Dolor adipisicing nostrud et aute Excepteur amet commodo
-                                ea dolore irure esse Duis nulla sint fugiat cillum ullamco proident
-                                aliquip quis qui voluptate dolore veniam Ut laborum non est in officia.
+                                e-Pawn accepts a wide range of valued products, including luxury items like designer
+                                handbags, and shoes. We also accept a wider range of
+                                products that are typically accepted by pawnshops, gold jewelry, precious metals,
+                                and more.
+
                             </p>
+
+                            <div class="s-intro__more">
+                                <p style="font-size: 1.5rem;
+                                 color: white;">
+                                    Click shop more for a complete list of
+                                    the things we accept and have for sale.</p>
+                                <a class="smoothscroll btn btn--stroke s-intro__more-btn" href="#about">
+                                    Shop More
+                                </a>
+                            </div>
 
                         </div> <!-- end column -->
                     </div> <!-- end section header -->
@@ -391,13 +404,13 @@
                             <div class="brick folio-item" data-animate-el>
 
                                 <div class="folio-item__thumb">
-                                    <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-shutterbug.jpg" Title="Shutterbug" data-size="1050x700">
-                                        <img src="images/portfolio/shutterbug.jpg" srcset="images/portfolio/shutterbug.jpg 1x, images/portfolio/shutterbug@2x.jpg 2x" alt="">
+                                    <a class="folio-item__thumb-link" href="<?php echo base_url('assets_c') ?>/images/portfolio/gallery/g-shutterbug.jpg" Title="Gadgets" data-size="1050x700">
+                                        <img src="<?php echo base_url('assets_c') ?>/images/portfolio/camera1.jpg" srcset="<?php echo base_url('assets_c') ?>/images/portfolio/camera1.jpg 1x, <?php echo base_url('assets_c') ?>/images/portfolio/camera.jpg 2x" alt="">
                                     </a>
                                 </div>
                                 <div class="folio-item__info">
-                                    <div class="folio-item__cat">Web Development</div>
-                                    <h4 class="folio-item__title">Shutterbug</h4>
+                                    <!-- <div class="folio-item__cat">Technology</div> -->
+                                    <h4 class="folio-item__title">Camera</h4>
                                 </div>
                                 <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter">
@@ -414,13 +427,13 @@
                             <div class="brick folio-item" data-animate-el>
 
                                 <div class="folio-item__thumb">
-                                    <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-yellowwall.jpg" Title="Yellow Wall" data-size="1050x700">
-                                        <img src="images/portfolio/yellowwall.jpg" srcset="images/portfolio/yellowwall.jpg 1x, images/portfolio/yellowwall@2x.jpg 2x" alt="">
+                                    <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-yellowwall.jpg" Title="Shoe" data-size="1050x700">
+                                        <img src="<?php echo base_url('assets_c') ?>/images/portfolio/shoe1.jpg" srcset="<?php echo base_url('assets_c') ?>/images/portfolio/shoe1.jpg 1x, <?php echo base_url('assets_c') ?>/images/portfolio/shoe.jpg 2x" alt="">
                                     </a>
                                 </div>
                                 <div class="folio-item__info">
-                                    <div class="folio-item__cat">Marketing</div>
-                                    <h4 class="folio-item__title">Yellow Wall</h4>
+                                    <!-- <div class="folio-item__cat">Marketing</div> -->
+                                    <h4 class="folio-item__title">Shoe</h4>
                                 </div>
                                 <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter">
@@ -437,13 +450,13 @@
                             <div class="brick folio-item" data-animate-el>
 
                                 <div class="folio-item__thumb">
-                                    <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-architecture.jpg" Title="Architecture" data-size="1050x700">
-                                        <img src="images/portfolio/architecture.jpg" srcset="images/portfolio/architecture.jpg 1x, images/portfolio/architecture@2x.jpg 2x" alt="">
+                                    <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-architecture.jpg" Title="Gadget" data-size="1050x700">
+                                        <img src="<?php echo base_url('assets_c') ?>/images/portfolio/gadget1.jpg" srcset="<?php echo base_url('assets_c') ?>/images/portfolio/gadget1.jpg 1x, <?php echo base_url('assets_c') ?>/images/portfolio/gadget.jpg 2x" alt="">
                                     </a>
                                 </div>
                                 <div class="folio-item__info">
-                                    <div class="folio-item__cat">Marketing</div>
-                                    <h4 class="folio-item__title">Architecture</h4>
+                                    <!-- <div class="folio-item__cat">Marketing</div> -->
+                                    <h4 class="folio-item__title">Technology</h4>
                                 </div>
                                 <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter">
@@ -460,13 +473,13 @@
                             <div class="brick folio-item" data-animate-el>
 
                                 <div class="folio-item__thumb">
-                                    <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-minimalismo.jpg" Title="Minimalismo" data-size="1050x700">
-                                        <img src="images/portfolio/minimalismo.jpg" srcset="images/portfolio/minimalismo.jpg 1x, images/portfolio/minimalismo@2x.jpg 2x" alt="">
+                                    <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-minimalismo.jpg" Title="Bag" data-size="1050x700">
+                                        <img src="<?php echo base_url('assets_c') ?>/images/portfolio/bag1.jpg" srcset="<?php echo base_url('assets_c') ?>/images/portfolio/bag1.jpg 1x, images/portfolio/bag.jpg 2x" alt="">
                                     </a>
                                 </div>
                                 <div class="folio-item__info">
-                                    <div class="folio-item__cat">UI/UX Design</div>
-                                    <h4 class="folio-item__title">Minimalismo</h4>
+                                    <!-- <div class="folio-item__cat">UI/UX Design</div> -->
+                                    <h4 class="folio-item__title">Luxury Bag</h4>
                                 </div>
                                 <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter">
@@ -483,13 +496,13 @@
                             <div class="brick folio-item" data-animate-el>
 
                                 <div class="folio-item__thumb">
-                                    <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-skaterboy.jpg" Title="Skaterboy" data-size="1050x700">
-                                        <img src="images/portfolio/skaterboy.jpg" srcset="images/portfolio/skaterboy.jpg 1x, images/portfolio/skaterboy@2x.jpg 2x" alt="">
+                                    <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-skaterboy.jpg" Title="Cloth" data-size="1050x700">
+                                        <img src="<?php echo base_url('assets_c') ?>/images/portfolio/cloth1.jpg" srcset="<?php echo base_url('assets_c') ?>/images/portfolio/cloth1.jpg 1x, <?php echo base_url('assets_c') ?>/images/portfolio/cloth.jpg 2x" alt="">
                                     </a>
                                 </div>
                                 <div class="folio-item__info">
-                                    <div class="folio-item__cat">Branding</div>
-                                    <h4 class="folio-item__title">Skaterboy</h4>
+                                    <!-- <div class="folio-item__cat">Branding</div> -->
+                                    <h4 class="folio-item__title">Dress</h4>
                                 </div>
                                 <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter">
@@ -506,13 +519,13 @@
                             <div class="brick folio-item" data-animate-el>
 
                                 <div class="folio-item__thumb">
-                                    <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-salad.jpg" Title="Salad" data-size="1050x700">
-                                        <img src="images/portfolio/salad.jpg" srcset="images/portfolio/salad.jpg 1x, images/portfolio/salad@2x.jpg 2x" alt="">
+                                    <a class="folio-item__thumb-link" href="<?php echo base_url('assets_c') ?>/images/portfolio/gallery/g-salad.jpg" Title="Jewelry" data-size="1050x700">
+                                        <img src="<?php echo base_url('assets_c') ?>/images/portfolio/rings1.jpg" srcset="<?php echo base_url('assets_c') ?>/images/portfolio/rings1.jpg 1x, <?php echo base_url('assets_c') ?>/images/portfolio/rings.jpg 2x" alt="">
                                     </a>
                                 </div>
                                 <div class="folio-item__info">
-                                    <div class="folio-item__cat">Branding</div>
-                                    <h4 class="folio-item__title">Salad</h4>
+                                    <!-- <div class="folio-item__cat">Branding</div> -->
+                                    <h4 class="folio-item__title">Rings</h4>
                                 </div>
                                 <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter">
@@ -531,6 +544,28 @@
                     </div> <!-- end column  -->
                 </div> <!-- end s-portfolio__content -->
 
+                <!-- <div class="s-portfolio__header" style="font-size: 1.5rem;
+                               background-color: black;
+                               margin-top:1rem">
+
+                    <div class="row narrow section-header section-header--dark has-bottom-sep">
+                        <div class="column ">
+                            <div class="s-intro__more">
+                                <p style="font-size: 1.5rem;
+                                 color: white;">
+                                    Click shop more for a complete list of
+                                    the things we accept and have for sale.</p>
+                                <a class="smoothscroll btn btn--stroke s-intro__more-btn" href="#about">
+                                    Shop More
+                                </a>
+                            </div>
+
+                        </div> 
+                    </div> 
+
+                </div> end s-portfolio__header -->
+
+
                 <div class="row testimonials">
                     <div class="column lg-12" data-animate-block>
 
@@ -542,12 +577,11 @@
 
                                 <div class="testimonial-slider__slide swiper-slide">
                                     <p>
-                                        Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem.
-                                        Explicabo a quaerat sint autem dolore ducimus ut consequatur neque. Nisi dolores quaerat fuga rem nihil nostrum.
-                                        Laudantium quia consequatur molestias.
+                                        Amazing shop. PERIOD. Service is always perfect and is always on point, and the staff is very friendly and accommodating.
+                                        Always looking forward to have new transaction with e-Pawn
                                     </p>
                                     <div class="testimonial-slider__author">
-                                        <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonial-slider__avatar">
+                                        <img src="<?php echo base_url('assets_c') ?>/images/avatars/user-02.jpg" alt="Author image" class="testimonial-slider__avatar">
                                         <cite class="testimonial-slider__cite">
                                             <strong>Tim Cook</strong>
                                             <span>CEO, Apple</span>
@@ -557,12 +591,10 @@
 
                                 <div class="testimonial-slider__slide swiper-slide">
                                     <p>
-                                        Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
-                                        Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium perspiciatis.
-                                        Quasi voluptas eius distinctio. Atque eos maxime.
+                                        Convinient especially in time of pandemic! kudos e-pawn shop!
                                     </p>
                                     <div class="testimonial-slider__author">
-                                        <img src="images/avatars/user-03.jpg" alt="Author image" class="testimonial-slider__avatar">
+                                        <img src="<?php echo base_url('assets_c') ?>/images/avatars/user-03.jpg" alt="Author image" class="testimonial-slider__avatar">
                                         <cite class="testimonial-slider__cite">
                                             <strong>Sundar Pichai</strong>
                                             <span>CEO, Google</span>
@@ -577,7 +609,7 @@
                                         Voluptatem dignissimos ut.
                                     </p>
                                     <div class="testimonial-slider__author">
-                                        <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonial-slider__avatar">
+                                        <img src="<?php echo base_url('assets_c') ?>/images/avatars/user-01.jpg" alt="Author image" class="testimonial-slider__avatar">
                                         <cite class="testimonial-slider__cite">
                                             <strong>Satya Nadella</strong>
                                             <span>CEO, Microsoft</span>
@@ -587,12 +619,10 @@
 
                                 <div class="testimonial-slider__slide swiper-slide">
                                     <p>
-                                        Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel dui. In ac felis
-                                        quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Qui sed at corrupti expedita voluptas odit.
-                                        Nihil ea quia nesciunt. Ducimus aut sed ipsam.
+                                        Mabilis at mahusay ang services!
                                     </p>
                                     <div class="testimonial-slider__author">
-                                        <img src="images/avatars/user-06.jpg" alt="Author image" class="testimonial-slider__avatar">
+                                        <img src="<?php echo base_url('assets_c') ?>/images/avatars/user-06.jpg" alt="Author image" class="testimonial-slider__avatar">
                                         <cite class="testimonial-slider__cite">
                                             <strong>Jeff Bezos</strong>
                                             <span>CEO, Amazon</span>
@@ -609,7 +639,7 @@
                     </div> <!-- end column -->
                 </div> <!-- end row testimonials -->
 
-                <div class="clients-block">
+                <!-- <div class="clients-block">
                     <div class="row">
                         <div class="column lg-12" data-animate-block>
 
@@ -626,11 +656,12 @@
                                 </div>
 
                                 <div class="swiper-pagination"></div>
-                            </div> <!-- end clients -->
+                            </div>
 
-                        </div> <!-- end column -->
-                    </div> <!-- end clients-outer -->
-                </div> <!-- end clients-block -->
+                        </div> 
+                    </div> 
+                </div> 
+             -->
 
             </section> <!-- end portfolio -->
 
@@ -642,10 +673,10 @@
                     <div class="column lg-12">
 
                         <h3 class="text-pretitle">Get In Touch</h3>
-                        <h1 class="text-display-title">
-                            Have an idea or an epic project in mind? Talk to us.
-                            Let’s work together and make something great.
-                            Drop us a line at <a href="mailto:#0">hello@infinity.com</a>.
+                        <h1 class="text-display-title" style="font-size: 3.2rem;
+                        margin-top: 7rem ;line-height: 2;">
+                            We’d love to assist you with your ePawn loan journey.
+                            <br> may talk to any of our loan support team during business hours. <br><a href="mailto:#0">ePawn@gmail.com</a>.
                         </h1>
 
                     </div> <!-- end column -->
@@ -657,9 +688,9 @@
                         <h5 class="with-top-line">Where to Find Us</h5>
 
                         <p>
-                            1600 Amphitheatre Parkway <br>
-                            Mountain View, California <br>
-                            94043 US
+                            Don Fabian St., Commonwealth <br>
+                            Quezon City Metro-Manila<br>
+                            1119 Philippines
                         </p>
                     </div>
 
@@ -677,9 +708,9 @@
                         <h5 class="with-top-line">Contact Us</h5>
 
                         <ul class="s-contact__list">
-                            <li><a href="mailto:#0">info@infinity.com</a></li>
-                            <li><a href="tel:197-543-2345">+197 543 2345</a></li>
-                            <li><a href="tel:197-123-9876">+197 123 9876</a></li>
+                            <li><a href="mailto:#0">ePawn@gmail.com</a></li>
+                            <li><a href="tel:02-1234567">02-1234567</a></li>
+                            <li><a href="tel:+63-2-1234567">+63-2-1234567</a></li>
                         </ul>
                     </div>
 

@@ -19,13 +19,22 @@
     <link href="<?php echo base_url('assets') ?>/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
     <link href="<?php echo base_url('assets') ?>/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <!-- cutom css  -->
+    <link href="<?php echo base_url('assets') ?>/css/custom.css" rel="stylesheet" type="text/css" />
+
+
 
 </head>
 
-<body>
+<body style=" background-image: url(assets/images/banner.jpg);
+    background-repeat: no-repeat;
+	background-position: center 30%;
+	background-size: cover; 
+    backdrop-filter: blur(10px);">
     <div class="account-pages my-5 pt-sm-5">
         <div class="container">
             <div class="row justify-content-center">
+                <!-- <div class="col "> </div> -->
                 <div class="col-md-8 col-lg-6 col-xl-5">
                     <div class="card overflow-hidden">
                         <div class="bg-primary bg-soft">
@@ -152,12 +161,15 @@
     <script src="assets/libs/parsleyjs/parsley.min.js"></script>
     <!-- toastr plugin -->
     <script src="<?php echo base_url('assets') ?>/libs/toastr/build/toastr.min.js"></script>
+    <!-- <script src="<?php echo base_url('assets_c') ?>/js/plugins.js"></script> -->
+    <!-- <script src="<?php echo base_url('assets_c') ?>/js/main.js"></script> -->
 
     <!-- common js -->
     <script src="<?php echo base_url('assets') ?>/js/common.js"></script>
 
     <!-- login js -->
     <script src="<?php echo base_url('assets') ?>/js/access/login.js"></script>
+
 
 </body>
 
