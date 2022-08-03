@@ -50,26 +50,37 @@
         <header class="s-header">
 
             <div class="s-header__logo">
-                <a class="logo" href="Access">
-                    <!-- <img src="<?php echo base_url('assets_c') ?>/images/logo.svg" alt="Login"> -->
-                    <button type="button" style="
-                            background-color: black;
-                            border: none;
-                            color: white;
-                            /* padding: 20px; */
-                            text-align: center;
-                            text-decoration: none;
-                            display: inline-block;
-                            font-size: 16px;
-                            margin: 4px 2px;
-                            border-radius: 8px;">Login</button>
+                <a class="" href="">
+                    <span><img src="<?php echo base_url('assets_c') ?>/images/logoo1.png" alt="Login"> <span class="s-header__menu-text"> e-Pawn</span></span>
+                    <!-- <button type="button" style="
+                    background-color: black;
+                    border: none;
+                    color: white;
+                    /* padding: 20px; */
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 16px;
+                    margin: 4px 2px;
+                    border-radius: 8px;">Login</button> -->
                 </a>
             </div>
 
-            <a class="s-header__menu-toggle" href="#0" class="">
-                <span class="s-header__menu-text">Menu</span>
-                <span class="s-header__menu-icon"></span>
+            <a class="s-header__menu-toggle" href="Access" class="">
+
+                <button type="button" onclick="window.location='Access'" style="background-color: Transparent;
+                    background-repeat:no-repeat;
+                    border: none;
+                    cursor:pointer;
+                    overflow: hidden;
+                    padding:0;
+                    text-align: center;
+                    color: white;
+                    margin:0;">login</button>
+
             </a>
+
+
 
 
             <nav class="s-header__nav">
@@ -162,9 +173,11 @@
                         </h1>
 
                         <div class="s-intro__more">
-                            <a class="smoothscroll btn btn--stroke s-intro__more-btn" href="#about">
+                            <button class="smoothscroll btn btn--stroke s-intro__more-btn" style="
+                            border: 2px solid white;
+                            color:white;" onclick="window.location='Product'">
                                 Shop More
-                            </a>
+                            </button>
                         </div>
                     </div> <!-- s-intro__content-inner -->
 
@@ -751,8 +764,8 @@
         <footer id="colophon" class="s-footer">
             <div class="row">
                 <div class="column lg-12 ss-copyright">
-                    <span>© Copyright Infinity 2022</span>
-                    <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+                    <span>© ePawn Shop Philippines 2022</span>
+
                 </div>
             </div>
 

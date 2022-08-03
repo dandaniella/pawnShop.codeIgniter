@@ -57,7 +57,7 @@
                                         <h5 class="modal-title text-white" id="staticBackdropLabel"><i class="fas fa-user-circle  fa-lg (33% increase) text-white"></i> &nbsp Add User Credential</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
-                                    <form class="form-horizontal" action="index.html" id="login_id">
+                                    <form class="form-horizontal" action="index.html" id="login_id" enctype="multipart/form-data">
                                         <div class="modal-body">
 
 

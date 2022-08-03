@@ -298,31 +298,31 @@ $(function () {
 		e.preventDefault();
 
 		if ($("#login_id").parsley().validate()) {
-			//no validate
-			// $.ajax({
-			// 	url: apiURL + "login",
-			// 	type: "POST",
-			// 	data: {
-			// 		user_email: $("#user_email").val(),
-			// 		user_password: $("#user_password").val(),
-			// 	},
-			// 	dataType: "json",
-			// 	success: function (data) {
-			// 		console.log(data);
-			// 		localStorage.setItem("TOKEN", data.token);
-			// 		// save session data in php
-			// 		let session_data = "";
-			// 		session_data += "token=" + data.token;
-			// 		session_data += "&user_name=" + data.data.user_name;
-			// 		session_data += "&user_email=" + data.data.user_email;
-			// 		session_data += "&user_type=" + data.data.user_type;
-			// 		window.location.replace(baseURL + "Access/oAuth?" + session_data);
-			// 	},
-			// 	error: function ({ responseJSON }) {
-			// 		console.log(responseJSON);
-			// 		notification("error", " ", responseJSON.message.join());
-			// 	},
-			// });
+			// no validate
+			$.ajax({
+				url: apiURL + "login",
+				type: "POST",
+				data: {
+					user_email: $("#user_email").val(),
+					user_password: $("#user_password").val(),
+				},
+				dataType: "json",
+				success: function (data) {
+					console.log(data);
+					localStorage.setItem("TOKEN", data.token);
+					// save session data in php
+					let session_data = "";
+					session_data += "token=" + data.token;
+					session_data += "&user_name=" + data.data.user_name;
+					session_data += "&user_email=" + data.data.user_email;
+					session_data += "&user_type=" + data.data.user_type;
+					window.location.replace(baseURL + "Access/oAuth?" + session_data);
+				},
+				error: function ({ responseJSON }) {
+					console.log(responseJSON);
+					notification("error", " ", responseJSON.message.join());
+				},
+			});
 		}
 	});
 
@@ -360,6 +360,7 @@ $(function () {
 	});
 
 	// data table
+
 	loadTable = () => {
 		$.ajaxSetup({
 			headers: {
@@ -391,8 +392,8 @@ $(function () {
 					className: "dtr-control",
 				},
 				{
-					data: "user_email",
-					name: "user_email",
+					data: "user_status",
+					name: "user_status",
 					searchable: true,
 					width: "30%",
 					className: "dtr-control",
@@ -419,8 +420,8 @@ $(function () {
 					aData["id"] +
 					'\',0)" class="btn btn-light" >EDIT<i class ="bx bx-info-circle font-size-16 align-middle></i></button>';
 
-				$("td:eq(0)", nRow).html(aData["user_email"]);
-				// $("td:eq(1)", nRow).html(aData["user_email"]);
+				$("td:eq(0)", nRow).html(aData["user_status"]);
+				$("td:eq(1)", nRow).html(aData["user_email"]);
 				$("td:eq(1)", nRow).html(buttons);
 			},
 			drawCallBack: function (settings) {

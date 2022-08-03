@@ -30,16 +30,29 @@ class Access extends CI_Controller
     {
         if ($_GET['token'] != null) {
             //set session
-            $this->session->set_userdata(
-                array(
-                    'TOKEN' => $_GET['token'],
-                    'USER_NAME' =>  $_GET['user_name'],
-                    'USER_EMAIL' =>  $_GET['user_email'],
-                    'USER_TYPE' =>  $_GET['user_type'],
-                )
-            );
+            if ($_GET['user_type'] === "Admin") {
+                $this->session->set_userdata(
+                    array(
+                        'TOKEN' => $_GET['token'],
+                        'USER_NAME' =>  $_GET['user_name'],
+                        'USER_EMAIL' =>  $_GET['user_email'],
+                        'USER_TYPE' =>  $_GET['user_type'],
+                    )
+                );
 
-            redirect(base_url('./SystemSetup/dashboard'));
+                redirect(base_url('./SystemSetup/dashboard'));
+            } else if ($_GET['user_type'] === "Client") {
+                $this->session->set_userdata(
+                    array(
+                        'TOKEN' => $_GET['token'],
+                        'USER_NAME' =>  $_GET['user_name'],
+                        'USER_EMAIL' =>  $_GET['user_email'],
+                        'USER_TYPE' =>  $_GET['user_type'],
+                    )
+                );
+
+                redirect(base_url('./Client/dashboard'));
+            }
         }
 
         //redirect to System setup Dashboard

@@ -55,3 +55,4 @@ $route['translate_uri_dashes'] = FALSE;
 
 // CUSTOM ROUTES
 $route['Access'] = 'Access/login';
+// $route['Products'] = 'Products/prodcuts';
