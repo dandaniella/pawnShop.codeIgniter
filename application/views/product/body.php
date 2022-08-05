@@ -56,15 +56,11 @@
         </div>
     </header>
 
-    <div class="my-5 pt-sm-5" style="background: url(' https://cf.shopee.ph/file/36a846a3e6d10b211425947c6e20ae40') center top / 100% no-repeat; min-width: 1200px; padding-bottom: 0px; margin: 0px auto 4.375rem;">
+    <div class="main-content" style="   margin-left: 0px;">
 
-        <div class="account-pages ">
+        <div class="page-content" style="background: url(' https://cf.shopee.ph/file/36a846a3e6d10b211425947c6e20ae40') center top / 100% no-repeat;">
+            <div class="container-fluid" style="width:70%;">
 
-
-            <div class="container">
-                <div class="row" style="background-color:red;">
-                    <span>asas</span>
-                </div>
                 <!-- start page title -->
                 <div class="row">
                     <div class="col-12">
@@ -85,105 +81,105 @@
 
                 <div class="row">
                     <!-- <div class="col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title mb-4">Filter</h4>
+                     <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">Filter</h4>
 
+                            <div>
+                                <h5 class="font-size-14 mb-3">Clothes</h5>
+                                <ul class="list-unstyled product-list">
+                                    <li><a href="#"><i class="mdi mdi-chevron-right me-1"></i> T-shirts</a></li>
+                                    <li><a href="#"><i class="mdi mdi-chevron-right me-1"></i> Shirts</a></li>
+                                    <li><a href="#"><i class="mdi mdi-chevron-right me-1"></i> Jeans</a></li>
+                                    <li><a href="#"><i class="mdi mdi-chevron-right me-1"></i> Jackets</a></li>
+                                </ul>
+                            </div>
+                            <div class="mt-4 pt-3">
+                                <h5 class="font-size-14 mb-3">Price</h5>
+                                <input type="text" id="pricerange">
+                            </div>
+
+                            <div class="mt-4 pt-3">
+                                <h5 class="font-size-14 mb-3">Discount</h5>
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" id="productdiscountCheck1">
+                                    <label class="form-check-label" for="productdiscountCheck1">
+                                        Less than 10%
+                                    </label>
+                                </div>
+
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" id="productdiscountCheck2">
+                                    <label class="form-check-label" for="productdiscountCheck2">
+                                        10% or more
+                                    </label>
+                                </div>
+
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" id="productdiscountCheck3" checked>
+                                    <label class="form-check-label" for="productdiscountCheck3">
+                                        20% or more
+                                    </label>
+                                </div>
+
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" id="productdiscountCheck4">
+                                    <label class="form-check-label" for="productdiscountCheck4">
+                                        30% or more
+                                    </label>
+                                </div>
+
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" id="productdiscountCheck5">
+                                    <label class="form-check-label" for="productdiscountCheck5">
+                                        40% or more
+                                    </label>
+                                </div>
+
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" id="productdiscountCheck6">
+                                    <label class="form-check-label" for="productdiscountCheck6">
+                                        50% or more
+                                    </label>
+                                </div>
+
+                            </div>
+
+                            <div class="mt-4 pt-3">
+                                <h5 class="font-size-14 mb-3">Customer Rating</h5>
                                 <div>
-                                    <h5 class="font-size-14 mb-3">Clothes</h5>
-                                    <ul class="list-unstyled product-list">
-                                        <li><a href="#"><i class="mdi mdi-chevron-right me-1"></i> T-shirts</a></li>
-                                        <li><a href="#"><i class="mdi mdi-chevron-right me-1"></i> Shirts</a></li>
-                                        <li><a href="#"><i class="mdi mdi-chevron-right me-1"></i> Jeans</a></li>
-                                        <li><a href="#"><i class="mdi mdi-chevron-right me-1"></i> Jackets</a></li>
-                                    </ul>
-                                </div>
-                                <div class="mt-4 pt-3">
-                                    <h5 class="font-size-14 mb-3">Price</h5>
-                                    <input type="text" id="pricerange">
-                                </div>
-
-                                <div class="mt-4 pt-3">
-                                    <h5 class="font-size-14 mb-3">Discount</h5>
                                     <div class="form-check mt-2">
-                                        <input class="form-check-input" type="checkbox" id="productdiscountCheck1">
-                                        <label class="form-check-label" for="productdiscountCheck1">
-                                            Less than 10%
+                                        <input class="form-check-input" type="checkbox" id="productratingCheck1">
+                                        <label class="form-check-label" for="productratingCheck1">
+                                            4 <i class="bx bxs-star text-warning"></i> & Above
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="productratingCheck2">
+                                        <label class="form-check-label" for="productratingCheck2">
+                                            3 <i class="bx bxs-star text-warning"></i> & Above
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="productratingCheck3">
+                                        <label class="form-check-label" for="productratingCheck3">
+                                            2 <i class="bx bxs-star text-warning"></i> & Above
                                         </label>
                                     </div>
 
                                     <div class="form-check mt-2">
-                                        <input class="form-check-input" type="checkbox" id="productdiscountCheck2">
-                                        <label class="form-check-label" for="productdiscountCheck2">
-                                            10% or more
+                                        <input class="form-check-input" type="checkbox" id="productratingCheck4">
+                                        <label class="form-check-label" for="productratingCheck4">
+                                            1 <i class="bx bxs-star text-warning"></i>
                                         </label>
                                     </div>
 
-                                    <div class="form-check mt-2">
-                                        <input class="form-check-input" type="checkbox" id="productdiscountCheck3" checked>
-                                        <label class="form-check-label" for="productdiscountCheck3">
-                                            20% or more
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check mt-2">
-                                        <input class="form-check-input" type="checkbox" id="productdiscountCheck4">
-                                        <label class="form-check-label" for="productdiscountCheck4">
-                                            30% or more
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check mt-2">
-                                        <input class="form-check-input" type="checkbox" id="productdiscountCheck5">
-                                        <label class="form-check-label" for="productdiscountCheck5">
-                                            40% or more
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check mt-2">
-                                        <input class="form-check-input" type="checkbox" id="productdiscountCheck6">
-                                        <label class="form-check-label" for="productdiscountCheck6">
-                                            50% or more
-                                        </label>
-                                    </div>
-
-                                </div>
-
-                                <div class="mt-4 pt-3">
-                                    <h5 class="font-size-14 mb-3">Customer Rating</h5>
-                                    <div>
-                                        <div class="form-check mt-2">
-                                            <input class="form-check-input" type="checkbox" id="productratingCheck1">
-                                            <label class="form-check-label" for="productratingCheck1">
-                                                4 <i class="bx bxs-star text-warning"></i> & Above
-                                            </label>
-                                        </div>
-                                        <div class="form-check mt-2">
-                                            <input class="form-check-input" type="checkbox" id="productratingCheck2">
-                                            <label class="form-check-label" for="productratingCheck2">
-                                                3 <i class="bx bxs-star text-warning"></i> & Above
-                                            </label>
-                                        </div>
-                                        <div class="form-check mt-2">
-                                            <input class="form-check-input" type="checkbox" id="productratingCheck3">
-                                            <label class="form-check-label" for="productratingCheck3">
-                                                2 <i class="bx bxs-star text-warning"></i> & Above
-                                            </label>
-                                        </div>
-
-                                        <div class="form-check mt-2">
-                                            <input class="form-check-input" type="checkbox" id="productratingCheck4">
-                                            <label class="form-check-label" for="productratingCheck4">
-                                                1 <i class="bx bxs-star text-warning"></i>
-                                            </label>
-                                        </div>
-
-                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                    </div> -->
+                </div> -->
                     <div class="col-lg-12">
 
                         <div class="row mb-3">
@@ -213,35 +209,12 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xl-4 col-sm-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="product-img position-relative">
-                                            <div class="avatar-sm product-ribbon">
-                                                <span class="avatar-title rounded-circle  bg-primary">
-                                                    - 25 %
-                                                </span>
-                                            </div>
-                                            <img src="assets/images/product/img-1.png" alt="" class="img-fluid mx-auto d-block">
-                                        </div>
-                                        <div class="mt-4 text-center">
-                                            <h5 class="mb-3 text-truncate"><a href="#" class="text-dark">Half sleeve T-shirt </a></h5>
 
-                                            <p class="text-muted">
-                                                <i class="bx bxs-star text-warning"></i>
-                                                <i class="bx bxs-star text-warning"></i>
-                                                <i class="bx bxs-star text-warning"></i>
-                                                <i class="bx bxs-star text-warning"></i>
-                                                <i class="bx bxs-star text-warning"></i>
-                                            </p>
-                                            <h5 class="my-0"><span class="text-muted me-2"><del>$500</del></span> <b>$450</b></h5>
+                        <!-- product list start -->
+                        <div class="row" id="product-list">
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-sm-6">
+
+                            <div class="col-xl-3 col-sm-6">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="product-img position-relative">
@@ -263,7 +236,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-sm-6">
+                            <div class="col-xl-3 col-sm-6">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="product-img position-relative">
@@ -290,7 +263,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-sm-6">
+                            <div class="col-xl-3 col-sm-6">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="product-img position-relative">
@@ -312,7 +285,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-sm-6">
+                            <div class="col-xl-3 col-sm-6">
                                 <div class="card">
                                     <div class="card-body">
 
@@ -340,7 +313,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-sm-6">
+                            <div class="col-xl-3 col-sm-6">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="product-img position-relative">
@@ -400,6 +373,29 @@
                     </div>
                 </div>
                 <!-- end row -->
-            </div>
 
+            </div> <!-- container-fluid -->
         </div>
+        <!-- End Page-content -->
+
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script> © Skote.
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="text-sm-end d-none d-sm-block">
+                            Design & Develop by Themesbrand
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- end main content-->
+
+    </div>

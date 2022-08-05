@@ -298,31 +298,31 @@ $(function () {
 		e.preventDefault();
 
 		if ($("#login_id").parsley().validate()) {
-			// no validate
-			$.ajax({
-				url: apiURL + "login",
-				type: "POST",
-				data: {
-					user_email: $("#user_email").val(),
-					user_password: $("#user_password").val(),
-				},
-				dataType: "json",
-				success: function (data) {
-					console.log(data);
-					localStorage.setItem("TOKEN", data.token);
-					// save session data in php
-					let session_data = "";
-					session_data += "token=" + data.token;
-					session_data += "&user_name=" + data.data.user_name;
-					session_data += "&user_email=" + data.data.user_email;
-					session_data += "&user_type=" + data.data.user_type;
-					window.location.replace(baseURL + "Access/oAuth?" + session_data);
-				},
-				error: function ({ responseJSON }) {
-					console.log(responseJSON);
-					notification("error", " ", responseJSON.message.join());
-				},
-			});
+			//no validate
+			// $.ajax({
+			// 	url: apiURL + "login",
+			// 	type: "POST",
+			// 	data: {
+			// 		user_email: $("#user_email").val(),
+			// 		user_password: $("#user_password").val(),
+			// 	},
+			// 	dataType: "json",
+			// 	success: function (data) {
+			// 		console.log(data);
+			// 		localStorage.setItem("TOKEN", data.token);
+			// 		// save session data in php
+			// 		let session_data = "";
+			// 		session_data += "token=" + data.token;
+			// 		session_data += "&user_name=" + data.data.user_name;
+			// 		session_data += "&user_email=" + data.data.user_email;
+			// 		session_data += "&user_type=" + data.data.user_type;
+			// 		window.location.replace(baseURL + "Access/oAuth?" + session_data);
+			// 	},
+			// 	error: function ({ responseJSON }) {
+			// 		console.log(responseJSON);
+			// 		notification("error", " ", responseJSON.message.join());
+			// 	},
+			// });
 		}
 	});
 
@@ -407,14 +407,13 @@ $(function () {
 				},
 			],
 			ajax: {
-				// ajax: "http://localhost:3600/epawn/user/datatable",
-				url: apiURL + "user_credentials/datatable",
-				// url: "http://localhost:3600/epawn/user/datatable",
+				url: apiURL + "user_credentials/datatables",
 				type: "GET",
 				ContentType: "application/x-www-form-urlencoded",
 			},
 			fnRowCallback: function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
 				let buttons = "";
+
 				buttons +=
 					'<button type= "button" onClick = "return editData(\'' +
 					aData["id"] +
@@ -423,6 +422,7 @@ $(function () {
 				$("td:eq(0)", nRow).html(aData["user_status"]);
 				$("td:eq(1)", nRow).html(aData["user_email"]);
 				$("td:eq(1)", nRow).html(buttons);
+				// $("span:eq(1)", nRow).html(aData["user_email"]);
 			},
 			drawCallBack: function (settings) {
 				// alert("heel");
@@ -431,6 +431,62 @@ $(function () {
 	};
 
 	loadTable();
+
+	loadProducts = () => {
+		$.ajax({
+			url: apiURL + "user_credentials/datatables",
+			type: "GET",
+			data: {
+				columns: [
+					{
+						data: "user_id",
+						name: "",
+						searchable: true,
+						orderable: true,
+						search: {
+							value: "",
+							regex: false,
+						},
+					},
+					{
+						data: "user_name",
+						name: "",
+						searchable: true,
+						orderable: true,
+						search: {
+							value: " ",
+							regex: false,
+						},
+					},
+				],
+				order: [
+					{
+						column: 0,
+						dir: "asc",
+					},
+				],
+				start: 0,
+				length: 2,
+				search: {
+					value: "admin",
+					regex: false,
+				},
+			},
+			dataType: "json",
+			success: function (data) {
+				console.log(data);
+				for (var i = 0; i < data.length; i++) {
+					$;
+				}
+			},
+			error: function ({ responseJSON }) {
+				console.log(responseJSON);
+				notification("error", " ", responseJSON.message.join());
+			},
+		});
+	};
+
+	loadProducts();
 
 	// 	//   $(document).ready(function() {
 	// 	//     $('#emp-table').dataTable( {

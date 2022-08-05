@@ -43,6 +43,10 @@
 <!-- Countdown js -->
 <script src="assets/js/pages/coming-soon.init.js"></script>
 
+
+<script src="assets/js/common.js"></script>
+<script src="assets/js/product/product.js"></script>
+
 <script src="assets/js/app.js"></script>
 
 </body>
