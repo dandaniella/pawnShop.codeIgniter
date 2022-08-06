@@ -28,7 +28,7 @@
 
 </head>
 
-<body style="  background-image: url(assets/images/banner1.jpg);
+<body style="  background-image: url('<?php echo base_url('assets') ?>/images/banner1.jpg');
     background-repeat: no-repeat;
 	background-position: center 10%;
 	background-size: cover; 
@@ -46,7 +46,7 @@
 
                             <div class="col-xl-8">
                                 <div class=" auth-full-bg pt-lg-5 p-4" style="max-height:80vh; 
-                                background-image: url(assets/images/banner3.jpg); background-repeat: no-repeat;
+                                background-image: url('<?php echo base_url('assets') ?>/images/banner3.jpg'); background-repeat: no-repeat;
 	                    background-position: center 30%;
 	                    background-size: cover; ">
                                     <div class="w-100">
@@ -106,7 +106,7 @@
                                             <div class="mb-4 mb-md-5">
                                                 <a href="index.html" class="">
                                                     <!-- <img src="assets/images/loggo1.jpg" alt="" height="30" class="auth-logo-dark"> -->
-                                                    <img src="assets/images/epawn.png" alt="" height="30" class="">
+                                                    <img src="<?php echo base_url('assets') ?>/images/epawn.png" alt="" height="30" class="">
                                                 </a>
                                             </div>
                                             <div class="my-auto">
@@ -206,7 +206,7 @@
     <script src="<?php echo base_url('assets') ?>/js/app.js"></script>
     <script src="<?php echo base_url('assets') ?>/js/anime.min.js"></script>
     <!-- parsley -->
-    <script src="assets/libs/parsleyjs/parsley.min.js"></script>
+    <script src="<?php echo base_url('assets') ?>/libs/parsleyjs/parsley.min.js"></script>
 
 
     <!-- toastr plugin -->

@@ -51,7 +51,7 @@ class Access extends CI_Controller
                     )
                 );
 
-                redirect(base_url('./Client/dashboard'));
+                redirect(base_url('./Client/items'));
             }
         }
 

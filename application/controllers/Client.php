@@ -20,17 +20,35 @@ class Client extends CI_Controller
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
 
+
 	// function __construct()
 	// {
 	// 	parent::__construct();
-	// 	($this->session->userdata('TOKEN')) ? null : redirect('/');
+	// 	($this->session->userdata('TOKEN')) ? null : redirect('Home/items');
 	// }
 
-	public function dashboard()
+	public function items()
 	{
-		$this->load->view('client_template/header');
-		$this->load->view('client_template/sidebar');
-		$this->load->view('client_template/body');
-		$this->load->view('client_template/footer');
+		$this->load->view('client_pages/header');
+		$this->load->view('item/body');
+		$this->load->view('client_pages/footer');
+	}
+	public function profile()
+	{
+		$this->load->view('client_pages/header');
+		$this->load->view('client_pages/profile');
+		$this->load->view('client_pages/footer');
+	}
+	public function calendar()
+	{
+		$this->load->view('client_pages/header');
+		$this->load->view('client_pages/calendar');
+		$this->load->view('client_pages/footer_calendar');
+	}
+	public function pawn_account()
+	{
+		$this->load->view('client_pages/header');
+		$this->load->view('client_pages/pawn_account');
+		$this->load->view('client_pages/footer');
 	}
 }

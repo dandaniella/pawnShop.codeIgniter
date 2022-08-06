@@ -66,9 +66,9 @@
                 </a>
             </div>
 
-            <a class="s-header__menu-toggle" href="Access" class="">
+            <a class="s-header__menu-toggle" class="">
 
-                <button type="button" onclick="window.location='Access'" style="background-color: Transparent;
+                <button type="button" onclick="window.location='<?php echo base_url('Access/login') ?>'" style="background-color: Transparent;
                     background-repeat:no-repeat;
                     border: none;
                     cursor:pointer;
@@ -175,7 +175,7 @@
                         <div class="s-intro__more">
                             <button class="smoothscroll btn btn--stroke s-intro__more-btn" style="
                             border: 2px solid white;
-                            color:white;" onclick="window.location='Product'">
+                            color:white;" onclick="window.location='<?php echo base_url('Home/items') ?>'">
                                 Shop More
                             </button>
                         </div>

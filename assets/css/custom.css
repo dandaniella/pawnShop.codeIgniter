@@ -3,6 +3,18 @@
 	animation: undefined-easeOutElastic, 3s;
 }
 
+.zoom-box {
+	transition: transform 0.2s; /* Animation */
+}
+
+.zoom-box:hover {
+	transform: scale(1.2);
+	z-index: 2;
+	border-color: #ffc835;
+	border-style: double;
+	border-width: thin;
+}
+
 @keyframes scale-easeOutElastic {
 	0% {
 		transform: scale(1);
