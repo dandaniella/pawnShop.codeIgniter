@@ -1,631 +1,162 @@
-<div class="content-wrapper">
-	<!-- Content Header (Page header) -->
-    <section class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1>Items</h1>
-                </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">DataTables</li>
-                    </ol>
-                </div>
-            </div>
-        </div><!-- /.container-fluid -->
-    </section>
+<div class="d-flex">
 
-    <!-- Main content -->
-    <section class="content">
+    <div class="dropdown d-inline-block">
+        <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <!-- <img class="rounded-circle header-profile-user" src="<?php echo base_url('assets') ?>/images/users/avatar-1.jpg" alt="Header Avatar"> -->
+            <i class="fas fa-user-circle"></i>
+            <span class="d-none d-xl-inline-block ms-1" key="t-henry">Henry</span>
+            <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end">
+            <!-- item-->
+            <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span></a>
+            <a class="dropdown-item" href="#"><i class="bx bx-wallet font-size-16 align-middle me-1"></i> <span key="t-my-wallet">My Wallet</span></a>
+            <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end">11</span><i class="bx bx-wrench font-size-16 align-middle me-1"></i> <span key="t-settings">Settings</span></a>
+            <a class="dropdown-item" href="#"><i class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">Lock screen</span></a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item text-danger" href="#"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+        </div>
+    </div>
+
+    <div class="dropdown d-inline-block">
+        <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+            <i class="bx bx-cog bx-spin"></i>
+        </button>
+    </div>
+
+</div>
+</div>
+</header>
+
+
+<!-- ============================================================== -->
+<!-- Start right Content here -->
+<!-- ============================================================== -->
+<div class="main-content">
+
+    <div class="page-content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12">
-                    <!-- /.card -->
+                <div class="d-sm-flex flex-wrap mb-4">
 
-                    <div class="card ">
-                        <div class="card-header row ">
-                            <div class="card-title col-sm-6">
-                                <!-- <span>Items</span> -->
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <button type="button" class="btn btn-primary float-sm-right" data-toggle="modal" data-target="#exampleModal">
-                                   Add an Item
-                                </button>
-                            </div>
-                        </div>
-                        <!-- /.card-header -->
-                        <div class="card-body">
-                            <table id="example1" class="table table-bordered table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Item Name</th>
-                                        <th>Item Type</th>
-                                        <th>Item Price</th>
-                                        <th>Item Category</th>
-                                        <th>Item Image</th>
-										<th>Item Description</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-									<tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-									<tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-									<tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-									<tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-									<tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-									<tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-									<tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-									<tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-									<tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-									<tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-									<tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-									<tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-									<tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-									<tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-									<tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-									<tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-									<tr>
-                                        <td>Trident</td>
-                                        <td>net
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>A</td>
-										<td>LOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-										<td>LOL</td>
-                                    </tr>
-                                </tbody>
-                                <!-- <tfoot>
-                                    <tr>
-                                        <th>Rendering engine</th>
-                                        <th>Browser</th>
-                                        <th>Platform(s)</th>
-                                        <th>Engine version</th>
-                                        <th>CSS grade</th>
-                                    </tr>
-                                </tfoot> -->
-                            </table>
+                    <h4 class="card-title mb-4">Email Sent</h4>
 
+                    <div class="ms-auto">
 
-                            <select class="js-example-basic-single" name="state">
-                                <option value="AL">Alabama</option>
-                                ...
-                                <option value="WY">Wyoming</option>
-                            </select>
-                        </div>
-                        <!-- /.card-body -->
-                    </div>
-                    <!-- /.card -->
-                </div>
-                <!-- /.col -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container-fluid -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="modal-title" id="exampleModalLabel">Add an Item</h3>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                        <!-- Add user modal Button -->
+                        <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            Add User Credentials
                         </button>
-                    </div>
 
-                    <!-- modal body  -->
-                    <div class="modal-body">
-                        <div class="container-fluid col-12">
 
-                            <form method="post" id="form_id" name="form_id">
-                                <div class="row">
-                                    <div class="form-group col-md-6 mb-4">
-										<label for="" class="form-label">Item Name</label>
-                                        <input type="text" class="form-control" placeholder="" id="item_name" name="item_name">
-                                       
+                        <!-- Modal add user cred -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content ">
+                                    <div class="modal-header col bg-primary">
+                                        <h5 class="modal-title text-white" id="staticBackdropLabel"><i class="fas fa-user-circle  fa-lg (33% increase) text-white"></i> &nbsp Add User Credential</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
+                                    <form class="form-horizontal" action="index.html" id="login_id" enctype="multipart/form-data">
+                                        <div class="modal-body">
 
-                                    <div class="input-group col-md-6 mb-4">
-										<label for="" class="form-label">Item Type</label>
-										<select class="form-select select2" style="width: 100%;">
-                                                <option selected="selected">--Item Type--</option>
-                                                <option>Pawned Item</option>
-                                                <option>Defaulted Item</option>
-                                                <option>Sold Item</option>
-                                        </select>
-                                    </div>
+
+                                            <div class="mb-3">
+                                                <label for="Email" class="form-label">Email</label>
+                                                <input type="text" class="form-control" id="user_email" name="user_email" placeholder="Enter email" data-parsley-required="true" parsley-type="email">
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label class="form-label">Password</label>
+                                                <div class="input-group auth-pass-inputgroup grid">
+                                                    <div class="col">
+                                                        <input type="password" class="form-control" placeholder="Enter password" aria-label="Password" aria-describedby="password-addon" id="user_password" name="user_password" data-parsley-required="true">
+                                                    </div>
+                                                    <div>
+                                                        <button class="btn btn-light " type="button"><i class="mdi mdi-eye-outline"></i></button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label class="form-label">Username</label>
+                                                <div class="input-group auth-pass-inputgroup grid">
+                                                    <div class="col">
+                                                        <input type="text" class="form-control" placeholder="Enter username" aria-label="username" id="user_name" name="user_name" data-parsley-required="true">
+                                                    </div>
+                                                    <div>
+                                                        <button class="btn btn-light " type="button"><i class="mdi mdi-eye-outline"></i></button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class=" col mb-3">
+                                                    <label class=" form-label">Single Select</label>
+
+
+
+                                                </div>
+                                                <div class="col">
+                                                    <select class="form-control select2  ">
+                                                        <option> Select asasasasas</option>
+                                                        <option value="AK">Alaska</option>
+                                                        <option value="HI">Hawaii</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </form>
                                 </div>
-
-                                <div class="row">
-                                    <div class="input-group input-group col-md-4">
-                                        <div class="form-group">
-                                            <label for="" class="form-label">Item Image</label>
-                                            <input type="file" class="form-control" id="username" name="username" style="width: 100%;">
-                                        </div>
-                                    </div>
-                                    <div class=" col-md-4 mb-10">
-                                        <div class="form-group">
-                                            <label for="" class="form-label">Item Category</label>
-                                            <select class="form-control select2" style="width: 100%;">
-                                                <option selected="selected">--Item Category--</option>
-                                                <option>Shoes</option>
-                                                <option>Accessories</option>
-                                                <option>Appliances</option>
-												<option>Jewelry</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 mb-4">
-                                        <div class="form-group">
-                                            <label for="" class="form-label">Item Price</label>
-											<input type="number" class="form-control" id="username" name="username" style="width: 100%;">
-                                        </div>
-                                    </div>
-                                </div>
-								<div class="row">
-									<div class="col-md-12 ">
-                                        <div class="form-group col-md-12">
-                                            <label for="" class="form-label">Item Description</label>
-                                            <textarea class="form-control" name="" id="" ></textarea>
-                                        </div>
-                                    </div>
-								</div>
-                            </form>
+                            </div>
                         </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="cancel" class="btn btn-secondary" data-dismiss="modal">Discard</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
 
-                    <!-- ./modal body  -->
+
                 </div>
-            </div>
+
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+
+                                <h4 class="card-title">Employee</h4>
+                                <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
+                                    <thead>
+                                        <tr>
+                                            <th>Full Name</th>
+                                            <th>Email</th>
+                                            <th>Status</th>
+											<th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+										
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+                <!-- end page title -->
+
+
+
+
+
+            </div> <!-- container-fluid -->
         </div>
-    </section>
-    <!-- /.content -->
-</div>
+        <!-- End Page-content -->
+
+

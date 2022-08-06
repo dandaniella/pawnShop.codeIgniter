@@ -59,7 +59,7 @@
 
 
 <!-- form advanced init -->
-<script src="<?php echo base_url('assets') ?>/js/pages/form-advanced.init.js"></script>
+<!-- <script src="<?php echo base_url('assets') ?>/js/pages/form-advanced.init.js"></script> -->
 
 <!-- app js -->
 <script src=" <?php echo base_url('assets') ?>/js/app.js"></script>
@@ -70,6 +70,9 @@
 
 <!-- user js -->
 <script src="<?php echo base_url('assets') ?>/js/user_management/user.js"></script>
+<!-- items js -->
+<script src="<?php echo base_url('assets') ?>/js/items_management/items.js"></script>
 </body>
 
 </html>
+

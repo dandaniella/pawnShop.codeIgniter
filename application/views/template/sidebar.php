@@ -79,9 +79,9 @@
               </a>
             </li>
             <li>
-              <a href="<?php echo base_url('SystemSetup/employee') ?>" class="waves-effect">
+              <a href="<?php echo base_url('SystemSetup/adminUser') ?>" class="waves-effect">
                 <i class="bx bx-home-circle"></i>
-                <span key="t-dashboards">Employee</span>
+                <span key="t-dashboards">User</span>
               </a>
             </li>
             <li>
@@ -109,7 +109,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="javascript: void(0);" class="waves-effect">
+                  <a href="<?php echo base_url('SystemSetup/items') ?>" class="waves-effect">
                     <i class="bx bx-home-circle"></i>
                     <span key="t-dashboards">Items</span>
                   </a>
