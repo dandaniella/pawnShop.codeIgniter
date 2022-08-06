@@ -1,5 +1,5 @@
 $(function () {
-	loadTable = () => {
+	loadTable1 = () => {
 		$.ajaxSetup({
 			headers: {
 				Accept: "application/json",
@@ -8,10 +8,10 @@ $(function () {
 			},
 		});
 
-		$("#datatable-buttons").dataTable().fnClearTable();
-		$("#datatable-buttons").dataTable().fnDraw();
-		$("#datatable-buttons").dataTable().fnDestroy();
-		$("#datatable-buttons").dataTable({
+		$("#table1").dataTable().fnClearTable();
+		$("#table1").dataTable().fnDraw();
+		$("#table1").dataTable().fnDestroy();
+		$("#table1").dataTable({
 			responsive: true,
 			serverSide: true,
 			order: [[0, "asc"]],
@@ -23,33 +23,25 @@ $(function () {
 				{ sClass: "text-left" },
 			],
 			columns: [
-				
 				{
 					data: "it_name",
 					name: "it_name",
 					searchable: true,
-					width: "25%",
+					width: "20%",
 					className: "dtr-control",
 				},
 				{
-					data: "it_type",
-					name: "it_type",
+					data: "it_name",
+					name: "it_name",
 					searchable: true,
-					width: "25%",
+					width: "30%",
 					className: "dtr-control",
 				},
 				{
-					data: "it_description",
-					name: "it_description",
+					data: "it_name",
+					name: "it_name",
 					searchable: true,
-					width: "25%",
-					className: "dtr-control",
-				},
-				{
-					data: "it_status",
-					name: "it_status",
-					searchable: true,
-					width: "25%",
+					width: "30%",
 					className: "dtr-control",
 				},
 				// {
@@ -66,18 +58,30 @@ $(function () {
 				type: "GET",
 				ContentType: "application/x-www-form-urlencoded",
 			},
-			fnRowCallback: function (nRow, bData, iDisplayIndex, iDisplayIndexFull) {
-				let buttons = "";
+			fnRowCallback: function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+				let view = "";
+				let edit = "";
+				let aDelete = "";
 
-				buttons +=
-					'<button type= "button" onClick = "return editData(\'' +
-					aData["id"] +
-					'\',0)" class="btn btn-light" >EDIT<i class ="bx bx-info-circle font-size-16 align-middle></i></button>';
+				// view +=
+				// 	'<button type= "button" onClick = "return editData(\'' +
+				// 	aData["id"] +
+				// 	'\',0)" class="btn btn-light" >View<i class ="bx bx-info-circle font-size-16 align-middle></i></button>';
 
-				$("td:eq(0)", nRow).html(bData["it_name"]);
-				$("td:eq(1)", nRow).html(bData["it_type"]);
-				$("td:eq(2)", nRow).html(bData["it_description"]);
-				$("td:eq(3)", nRow).html(bData["it_status"]);
+				// edit +=
+				// 	'<button type= "button" onClick = "return editData(\'' +
+				// 	aData["id"] +
+				// 	'\',0)" class="btn btn-light" >EDIT<i class ="bx bx-info-circle font-size-16 align-middle></i></button>';
+				// aDelete +=
+				// 	'<button type= "button" onClick = "return editData(\'' +
+				// 	aData["id"] +
+				// 	'\',0)" class="btn btn-light" >Delete<i class ="bx bx-info-circle font-size-16 align-middle></i></button>';
+
+				$("td:eq(0)", nRow).html(aData["it_name"]);
+				// $("td:eq(1)", nRow).html(aData["user_email"]);
+				// $("td:eq(2)", nRow).html(aData["user_status"]);
+				// $("td:eq(3)", nRow).html(view, edit, aDelete);
+				// $("td:eq(1)", nRow).html(buttons);
 				// $("span:eq(1)", nRow).html(aData["user_email"]);
 			},
 			drawCallBack: function (settings) {
@@ -86,7 +90,5 @@ $(function () {
 		});
 	};
 
-	loadTable();
+	loadTable1();
 });
-
-

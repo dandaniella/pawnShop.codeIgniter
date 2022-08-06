@@ -132,17 +132,17 @@
                             <div class="card-body">
 
                                 <h4 class="card-title">Employee</h4>
-                                <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
+                                <table id="table1" class="table table-bordered dt-responsive nowrap w-100">
                                     <thead>
                                         <tr>
                                             <th>Full Name</th>
                                             <th>Email</th>
                                             <th>Status</th>
-											<th>Action</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-										
+
                                     </tbody>
                                 </table>
                             </div>
@@ -158,5 +158,3 @@
             </div> <!-- container-fluid -->
         </div>
         <!-- End Page-content -->
-
-

@@ -46,7 +46,7 @@ class SystemSetup extends CI_Controller
 	{
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar');
-		$this->load->view('pages/item_management/items');
+		$this->load->view('pages/item_management/item');
 		$this->load->view('template/footer');
 	}
 
