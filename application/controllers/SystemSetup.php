@@ -82,13 +82,7 @@ class SystemSetup extends CI_Controller
 		$this->load->view('template/footer');
 	}
 
-	public function client()
-	{
-		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
-		$this->load->view('pages/client');
-		$this->load->view('template/footer');
-	}
+
 
 	public function contract()
 	{
@@ -129,5 +123,13 @@ class SystemSetup extends CI_Controller
 		$this->load->view('pages/user_management/employee');
 		$this->load->view('template/footer');
 		$this->load->view('pages/user_management/footer');
+	}
+
+	public function client()
+	{
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('pages/client_management/client');
+		$this->load->view('template/footer');
 	}
 }

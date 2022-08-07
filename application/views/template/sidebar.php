@@ -1,4 +1,4 @@
-<body data-sidebar="dark">
+<body data-sidebar="light">
 
   <!-- <body data-layout="horizontal" data-topbar="dark"> -->
   <!-- Begin page -->
@@ -8,21 +8,22 @@
         <div class="d-flex">
           <!-- LOGO -->
           <div class="navbar-brand-box">
-            <a href="index.html" class="logo logo-dark">
+            <a href="index.html" class="logo ">
               <span class="logo-sm">
-                <img src="<?php echo base_url('assets') ?>/images/logo.svg" alt="" height="22">
+                <img src="<?php echo base_url('assets') ?>/images/loggo1.jpg" alt="" height="35">
               </span>
               <span class="logo-lg">
-                <img src="<?php echo base_url('assets') ?>/images/logo-dark.png" alt="" height="17">
+                <!-- <img src="<?php echo base_url('assets') ?>/images/loggo1.jpg" alt="" height="50"> -->
+                <img src="<?php echo base_url('assets') ?>/images/epawn.png" alt="" height="50">
               </span>
             </a>
 
             <a href="index.html" class="logo logo-light">
               <span class="logo-sm">
-                <img src="<?php echo base_url('assets') ?>/images/logo-light.svg" alt="" height="22">
+                <img src="<?php echo base_url('assets') ?>/images/loggo1.jpg" alt="" height="22">
               </span>
               <span class="logo-lg">
-                <img src="<?php echo base_url('assets') ?>/images/logo-light.png" alt="" height="19">
+                <img src="<?php echo base_url('assets') ?>/images/loggo1.jpg" alt="" height="40">
               </span>
             </a>
           </div>
@@ -64,7 +65,7 @@
     <!-- ========== Left Sidebar Start ========== -->
     <div class="vertical-menu">
 
-      <div data-simplebar class="h-100">
+      <div data-simplebar class="h-100" style="background-color: #F2ECCE;">
 
         <!--- Sidemenu -->
         <div id="sidebar-menu">
@@ -85,7 +86,7 @@
               </a>
             </li>
             <li>
-              <a href="javascript: void(0);" class="waves-effect">
+              <a href="<?php echo base_url('SystemSetup/client') ?>" class="waves-effect">
                 <i class="bx bx-home-circle"></i>
                 <span key="t-dashboards">Client</span>
               </a>
