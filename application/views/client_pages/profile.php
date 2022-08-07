@@ -47,7 +47,7 @@
                                     <input type="text" class="form-control" id="cl_lastName" placeholder="Enter last name">
                                 </div>
                                 <div class="row mb-5">
-                                    <div class="col">
+                                    <div class="col-6">
                                         <label class="form-label">Sex</label>
                                         <select class="form-control select2-search-disable" id=" cl_sex" name=" cl_sex">
                                             <option>choose</option>
@@ -56,7 +56,7 @@
                                         </select>
 
                                     </div>
-                                    <div class="col">
+                                    <div class="col-6">
                                         <label for="cl_civilStatus">Civil status</label>
                                         <select class="form-control select2-search-disable" id=" cl_civilStatus" name=" cl_civilStatus">
                                             <option>choose</option>

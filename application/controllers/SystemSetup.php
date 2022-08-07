@@ -128,5 +128,6 @@ class SystemSetup extends CI_Controller
 		$this->load->view('template/sidebar');
 		$this->load->view('pages/user_management/employee');
 		$this->load->view('template/footer');
+		$this->load->view('pages/user_management/footer');
 	}
 }

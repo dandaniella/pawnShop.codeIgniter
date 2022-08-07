@@ -238,135 +238,112 @@ $(function () {
 		readURL(this);
 	});
 
-	//Initialize Select2 Elements
-	$(".select2").select2({
-		theme: "bootstrap4",
-		dropdownParent: $("#staticBackdrop"),
-	});
-
-	/*
-  |--------------------------------------------------------------------------
-  | data table for employee #emp-table
-  |--------------------------------------------------------------------------
-  */
-	// $('#emp-table').DataTable({
-	//   processing: true,
-	//   serverSide: true,
-	//   ajax : {
-	//         url : apiURL + "user_credentials",
-	//         type : "GET",
-	//         ContentType : "application/x-www-form-urlencoded",
-	//         headers:{
-	//           Accept: "application/json",
-	//           Authorization: "Bearer " + token,
-	//           ContentType: "application/x-www-form-urlencoded",
-	//         },
-	//       },
-	// });
-
-	//   $("#emp-table").DataTable({
-	//     "responsive": true,
-	//     "lengthChange": false,
-	//     "autoWidth": false,
-	//     "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
-	// }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-
-	// $("#emp-table").DataTable({
-	//   "processing": true,
-	//   "serverSide": true,
-	//   "ajax": {
-	//             "url": apiURL +"user_credentials",
-	//           },
-	//   "responsive": true,
-	//   "lengthChange": false,
-	//   "autoWidth": false,
-	//   "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
-	//   "columns": [
-	//     { "data": "user_name" }, { "data": "user_id" }, { "data": "user_email" }
-	//   ],
-	// }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-
-	// $(document).ready(function () {
-	// 	$("#datatable-buttons").DataTable({
-	// 		processing: true,
-	// 		serverSide: true,
-	// 		ajax: "http://localhost:3600/epawn/user",
-	// 	});
-	// });
-
-	$("#login_id").on("submit", function (e) {
-		e.preventDefault();
-
-		if ($("#login_id").parsley().validate()) {
-			//no validate
-			// $.ajax({
-			// 	url: apiURL + "login",
-			// 	type: "POST",
-			// 	data: {
-			// 		user_email: $("#user_email").val(),
-			// 		user_password: $("#user_password").val(),
-			// 	},
-			// 	dataType: "json",
-			// 	success: function (data) {
-			// 		console.log(data);
-			// 		localStorage.setItem("TOKEN", data.token);
-			// 		// save session data in php
-			// 		let session_data = "";
-			// 		session_data += "token=" + data.token;
-			// 		session_data += "&user_name=" + data.data.user_name;
-			// 		session_data += "&user_email=" + data.data.user_email;
-			// 		session_data += "&user_type=" + data.data.user_type;
-			// 		window.location.replace(baseURL + "Access/oAuth?" + session_data);
-			// 	},
-			// 	error: function ({ responseJSON }) {
-			// 		console.log(responseJSON);
-			// 		notification("error", " ", responseJSON.message.join());
-			// 	},
-			// });
-		}
-	});
-
-	$("#form_addUser_id").on("submit", function (e) {
-		e.preventDefault();
-
-		if ($("#form_addUser_id;").parsley().validate()) {
-			//no validate
-			// $.ajax({
-			// 	url: apiURL + "login",
-			// 	type: "POST",
-			// 	data: {
-			// 		user_email: $("#user_email").val(),
-			// 		user_password: $("#user_password").val(),
-			// 	},
-			// 	dataType: "json",
-			// 	success: function (data) {
-			// 		console.log(data);
-			// 		localStorage.setItem("TOKEN", data.token);
-			// 		// save session data in php
-			// 		let session_data = "";
-			// 		session_data += "token=" + data.token;
-			// 		session_data += "&user_name=" + data.data.user_name;
-			// 		session_data += "&user_email=" + data.data.user_email;
-			// 		session_data += "&user_type=" + data.data.user_type;
-			// 		window.location.replace(baseURL + "Access/oAuth?" + session_data);
-			// 	},
-			// 	error: function ({ responseJSON }) {
-			// 		console.log(responseJSON);
-			// 		notification("error", " ", responseJSON.message.join());
-			// 	},
-			// });
-			alert("hello");
-		}
-	});
-
 	// data table
+
+	editData = (id, type) => {
+		//3 for deactivation
+		alert("hello");
+	};
 
 	loadTable = () => {
 		$.ajaxSetup({
 			headers: {
 				Accept: "application/json",
-				// Authorization: "Bearer " + token,
+				Authorization: "Bearer " + token,
 				ContentType: "application/x-www-form-urlencoded",
+			},
+		});
+
+		$("#emp-table").dataTable().fnClearTable();
+		$("#emp-table").dataTable().fnDraw();
+		$("#emp-table").dataTable().fnDestroy();
+		$("#emp-table").dataTable({
+			responsive: true,
+			serverSide: true,
+			order: [[0, "asc"]],
+			aLengthMenu: [5, 10, 20, 30, 40, 50, 100],
+			buttons: ["copy", "csv", "excel", "pdf", "print"],
+			aoColumns: [
+				{ sClass: "text-left" },
+				{ sClass: "text-left" },
+				{ sClass: "text-left" },
+				{ sClass: "text-left" },
+				{ sClass: "text-left" },
+			],
+			columns: [
+				{
+					data: "em_fullName",
+					name: "em_fullName",
+					searchable: true,
+					width: "30%",
+					className: "dtr-control",
+				},
+				{
+					data: "em_hireDate",
+					name: "em_hireDate",
+					searchable: true,
+					width: "30%",
+					className: "dtr-control",
+				},
+				{
+					data: "em_contactNo",
+					name: "em_contactNo",
+					searchable: true,
+					width: "30%",
+					className: "dtr-control",
+				},
+				{
+					data: "em_status",
+					name: "em_status",
+					searchable: true,
+					width: "5%",
+					className: "dtr-control",
+				},
+			],
+			ajax: {
+				url: apiURL + "employee/datatables",
+				type: "GET",
+				ContentType: "application/x-www-form-urlencoded",
+			},
+			fnRowCallback: function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+				let buttons = `<div class="row" >"`;
+				let swicth = "";
+
+				// buttons +=
+				// 	'<button type="button" onClick = "return editData(\`' +
+				// 	aData["user_name"] +
+				// 	`\`,0)" class="btn btn-light" >EDIT<i class ="bx bx-info-circle font-size-16 align-middle></i></button>`;
+
+				buttons +=
+					`<div class="col-6">
+					<button type="button" class="btn btn-primary" onClick="return editData(\'` +
+					aData["user_email"] +
+					`\',0)"><i class="bx bx-edit-alt"></i></button>	</div>`;
+				buttons +=
+					`<div class="col-6">
+
+			
+				<button type="button" class="btn btn-primary" onClick="return editData(\'` +
+					aData["user_email"] +
+					`\',0)"><i class="bx bx-edit-alt"></i></button>	</div>`;
+				// hanap when checkbox is on click
+				buttons += `  <div class="form-check form-switch form-switch-lg mb-3" dir="ltr">
+				<input class="form-check-input" type="checkbox" id="SwitchCheckSizelg" checked>
+				<label class="form-check-label" for="SwitchCheckSizelg"></label>
+				</div>`;
+				buttons += `</div>"`;
+				swicth += `  <div class="form-check form-switch form-switch-lg mb-3" dir="ltr">
+				<input class="form-check-input" type="checkbox" id="SwitchCheckSizelg" checked>
+				<label class="form-check-label" for="SwitchCheckSizelg"></label>
+				</div>`;
+				$("td:eq(0)", nRow).html(aData["em_fullName"]);
+				$("td:eq(1)", nRow).html("User Role");
+				$("td:eq(2)", nRow).html(buttons);
+				$("td:eq(3)", nRow).html(swicth);
+				// $("span:eq(1)", nRow).html(aData["user_email"]);
+			},
+			drawCallBack: function (settings) {
+				// alert("heel");
 			},
 		});
 
@@ -377,7 +354,8 @@ $(function () {
 			responsive: true,
 			serverSide: true,
 			order: [[0, "asc"]],
-			aLengthMenu: [5, 10, 20, 30, 40, 50, 100],
+			aLengthMenu: [2, 10, 20, 30, 40, 50, 100],
+			buttons: ["copy", "csv", "excel", "pdf", "print"],
 			aoColumns: [
 				{ sClass: "text-left" },
 				{ sClass: "text-left" },
@@ -385,44 +363,55 @@ $(function () {
 			],
 			columns: [
 				{
-					data: "user_email",
-					name: "user_email",
+					data: "em_fullName",
+					name: "em_fullName",
 					searchable: true,
-					width: "20%",
+					width: "10%",
 					className: "dtr-control",
 				},
 				{
-					data: "user_status",
-					name: "user_status",
+					data: "em_id",
+					name: "em_id",
 					searchable: true,
-					width: "30%",
+					width: "10%",
 					className: "dtr-control",
 				},
 				{
-					data: "user_email",
-					name: "user_email",
+					data: "em_hireDate",
+					name: "em_hireDate",
 					searchable: true,
-					width: "30%",
+					width: "10%",
 					className: "dtr-control",
 				},
 			],
 			ajax: {
-				url: apiURL + "user_credentials/datatables",
+				url: apiURL + "employee/datatables",
 				type: "GET",
 				ContentType: "application/x-www-form-urlencoded",
 			},
 			fnRowCallback: function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
 				let buttons = "";
+				let swicth = "";
 
 				buttons +=
-					'<button type= "button" onClick = "return editData(\'' +
-					aData["id"] +
-					'\',0)" class="btn btn-light" >EDIT<i class ="bx bx-info-circle font-size-16 align-middle></i></button>';
+					`<button type="button" class="btn btn-primary" onClick="return editData(\'` +
+					aData["em_id"] +
+					`\',0)"><i class="bx bx-edit-alt"></i></button>`;
 
-				$("td:eq(0)", nRow).html(aData["user_status"]);
-				$("td:eq(1)", nRow).html(aData["user_email"]);
-				$("td:eq(1)", nRow).html(buttons);
-				// $("span:eq(1)", nRow).html(aData["user_email"]);
+				buttons +=
+					`<button type="button" class="btn btn-primary" onClick="return editData(\'` +
+					aData["em_id"] +
+					`\',0)"><i class="bx bx-edit-alt"></i></button>`;
+
+				// swicth += `  <div class="form-check form-switch form-switch-lg mb-3" dir="ltr">
+				// 	 		<input class="form-check-input" type="checkbox" id="SwitchCheckSizelg" checked>
+				// 	 		<label class="form-check-label" for="SwitchCheckSizelg"></label>
+				// 	 		</div>`;
+
+				$("td:eq(0)", nRow).html(aData["em_fullName"]);
+				$("td:eq(1)", nRow).html(aData["em_hireDate"]);
+				// $("td:eq(2)", nRow).html(buttons);
+				// $("td:eq(3)", nRow).html(swicth);
 			},
 			drawCallBack: function (settings) {
 				// alert("heel");
@@ -432,61 +421,61 @@ $(function () {
 
 	loadTable();
 
-	loadProducts = () => {
-		$.ajax({
-			url: apiURL + "user_credentials/datatables",
-			type: "GET",
-			data: {
-				columns: [
-					{
-						data: "user_id",
-						name: "",
-						searchable: true,
-						orderable: true,
-						search: {
-							value: "",
-							regex: false,
-						},
-					},
-					{
-						data: "user_name",
-						name: "",
-						searchable: true,
-						orderable: true,
-						search: {
-							value: " ",
-							regex: false,
-						},
-					},
-				],
-				order: [
-					{
-						column: 0,
-						dir: "asc",
-					},
-				],
-				start: 0,
-				length: 2,
-				search: {
-					value: "admin",
-					regex: false,
-				},
-			},
-			dataType: "json",
-			success: function (data) {
-				console.log(data);
-				for (var i = 0; i < data.length; i++) {
-					$;
-				}
-			},
-			error: function ({ responseJSON }) {
-				console.log(responseJSON);
-				notification("error", " ", responseJSON.message.join());
-			},
-		});
-	};
+	// loadProducts = () => {
+	// 	$.ajax({
+	// 		url: apiURL + "user_credentials/datatables",
+	// 		type: "GET",
+	// 		data: {
+	// 			columns: [
+	// 				{
+	// 					data: "user_id",
+	// 					name: "",
+	// 					searchable: true,
+	// 					orderable: true,
+	// 					search: {
+	// 						value: "",
+	// 						regex: false,
+	// 					},
+	// 				},
+	// 				{
+	// 					data: "user_name",
+	// 					name: "",
+	// 					searchable: true,
+	// 					orderable: true,
+	// 					search: {
+	// 						value: " ",
+	// 						regex: false,
+	// 					},
+	// 				},
+	// 			],
+	// 			order: [
+	// 				{
+	// 					column: 0,
+	// 					dir: "asc",
+	// 				},
+	// 			],
+	// 			start: 0,
+	// 			length: 2,
+	// 			search: {
+	// 				value: "admin",
+	// 				regex: false,
+	// 			},
+	// 		},
+	// 		dataType: "json",
+	// 		success: function (data) {
+	// 			console.log(data);
+	// 			for (var i = 0; i < data.length; i++) {
+	// 				$;
+	// 			}
+	// 		},
+	// 		error: function ({ responseJSON }) {
+	// 			console.log(responseJSON);
+	// 			notification("error", " ", responseJSON.message.join());
+	// 		},
+	// 	});
+	// };
 
-	loadProducts();
+	// loadProducts();
 
 	// 	//   $(document).ready(function() {
 	// 	//     $('#emp-table').dataTable( {

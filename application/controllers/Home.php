@@ -28,7 +28,7 @@ class Home extends CI_Controller
     public function items()
     {
         $this->load->view('item/header');
-        $this->load->view('item/body');
+        $this->load->view('item/home');
         $this->load->view('client_pages/footer');
     }
 }

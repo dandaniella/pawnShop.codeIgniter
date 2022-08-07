@@ -30,7 +30,7 @@ class Client extends CI_Controller
 	public function items()
 	{
 		$this->load->view('client_pages/header');
-		$this->load->view('item/body');
+		$this->load->view('item/home');
 		$this->load->view('client_pages/footer');
 	}
 	public function profile()
