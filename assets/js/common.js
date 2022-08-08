@@ -6,3 +6,27 @@ const notification = (type, title, message) => {
 };
 
 const token = localStorage.getItem("TOKEN");
+let button = document.querySelector(".submit");
+//form reset
+
+// $.ajaxSetup({
+// 	headers: {
+// 		Accept: "application/json",
+// 		Authorization: "Bearer " + token,
+// 	},
+// });
+
+formReset = (action = "hide") => {
+	alert("hello");
+	if (action == "hide") {
+		$(".form-id")[0].reset();
+	}
+};
+
+//trim input valuse except input fields
+function trimInputFields() {
+	var allInputs = $("input:not(:file()");
+	allInputs.each(function () {
+		$(this).val($.trim($(this).val()));
+	});
+}

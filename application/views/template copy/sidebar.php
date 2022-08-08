@@ -86,79 +86,85 @@
 
             <li class="nav-item">
               <a href="<?php echo base_url('SystemSetup/user') ?>" class="nav-link">
-							<i class="fa fa-users" aria-hidden="true" style="padding:5px"></i>
+                <i class="fa fa-users" aria-hidden="true" style="padding:5px"></i>
                 <p>Users Credential</p>
               </a>
             </li>
 
-						<li class="nav-item">
+            <li class="nav-item">
               <a href="<?php echo base_url('SystemSetup/items') ?>" class="nav-link">
-							<i class="fa fa-archive" aria-hidden="true" style="padding:5px"></i>
+                <i class="fa fa-archive" aria-hidden="true" style="padding:5px"></i>
                 <p>Items</p>
               </a>
             </li>
 
-						<li class="nav-item">
+            <li class="nav-item">
               <a href="<?php echo base_url('SystemSetup/items_category') ?>" class="nav-link">
-							<i class="fa fa-file" aria-hidden="true" style="padding:5px"></i>
+                <i class="fa fa-file" aria-hidden="true" style="padding:5px"></i>
                 <p>Items Category</p>
               </a>
             </li>
 
-						<li class="nav-item">
+            <li class="nav-item">
               <a href="<?php echo base_url('SystemSetup/order_details') ?>" class="nav-link">
-							<i class="fa fa-bell" aria-hidden="true" style="padding:5px"></i>
-              <p>Order Details</p>
+                <i class="fa fa-bell" aria-hidden="true" style="padding:5px"></i>
+                <p>Order Details</p>
               </a>
             </li>
 
-						<li class="nav-item">
+            <li class="nav-item">
               <a href="<?php echo base_url('SystemSetup/transactions') ?>" class="nav-link">
-							<i class="fa fa-bell" aria-hidden="true" style="padding:5px"></i>
-              <p>Transactions</p>
+                <i class="fa fa-bell" aria-hidden="true" style="padding:5px"></i>
+                <p>Transactions</p>
               </a>
             </li>
-						
 
-						<li class="nav-item">
+
+            <li class="nav-item">
               <a href="<?php echo base_url('SystemSetup/client') ?>" class="nav-link">
-							<i class="fa fa-bell" aria-hidden="true" style="padding:5px"></i>
-              <p>Client</p>
+                <i class="fa fa-bell" aria-hidden="true" style="padding:5px"></i>
+                <p>Client</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?php echo base_url('SystemSetup/client') ?>" class="nav-link">
+                <i class="fa fa-bell" aria-hidden="true" style="padding:5px"></i>
+                <p>Client</p>
               </a>
             </li>
 
-						<li class="nav-item">
+            <li class="nav-item">
               <a href="<?php echo base_url('SystemSetup/contract') ?>" class="nav-link">
-							<i class="fa fa-bell" aria-hidden="true" style="padding:5px"></i>
-              <p>Contract</p>
+                <i class="fa fa-bell" aria-hidden="true" style="padding:5px"></i>
+                <p>Contract</p>
               </a>
             </li>
 
-						<li class="nav-item">
+            <li class="nav-item">
               <a href="<?php echo base_url('SystemSetup/pawn') ?>" class="nav-link">
-							<i class="fa fa-bell" aria-hidden="true" style="padding:5px"></i>
-              <p>Pawn</p>
+                <i class="fa fa-bell" aria-hidden="true" style="padding:5px"></i>
+                <p>Pawn</p>
               </a>
             </li>
 
-						<li class="nav-item">
+            <li class="nav-item">
               <a href="<?php echo base_url('SystemSetup/pawn_payment') ?>" class="nav-link">
-							<i class="fa fa-bell" aria-hidden="true" style="padding:5px"></i>
-              <p>Pawn Payments</p>
+                <i class="fa fa-bell" aria-hidden="true" style="padding:5px"></i>
+                <p>Pawn Payments</p>
               </a>
             </li>
 
-						<li class="nav-item">
+            <li class="nav-item">
               <a href="<?php echo base_url('SystemSetup/contract_category') ?>" class="nav-link">
-							<i class="fa fa-bell" aria-hidden="true" style="padding:5px"></i>
-              <p>Contract Category</p>
+                <i class="fa fa-bell" aria-hidden="true" style="padding:5px"></i>
+                <p>Contract Category</p>
               </a>
             </li>
 
-						<li class="nav-item">
+            <li class="nav-item">
               <a href="<?php echo base_url('SystemSetup/employee') ?>" class="nav-link">
-							<i class="fa fa-bell" aria-hidden="true" style="padding:5px"></i>
-              <p>Employee</p>
+                <i class="fa fa-bell" aria-hidden="true" style="padding:5px"></i>
+                <p>Employee</p>
               </a>
             </li>
 

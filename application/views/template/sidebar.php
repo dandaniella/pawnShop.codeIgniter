@@ -92,7 +92,7 @@
               </a>
             </li>
             <li>
-              <a href="javascript: void(0);" class="waves-effect">
+              <a href="<?php echo base_url('SystemSetup/transactions') ?>" class="waves-effect">
                 <i class="bx bx-home-circle"></i>
                 <span key="t-dashboards">Transactions</span>
               </a>

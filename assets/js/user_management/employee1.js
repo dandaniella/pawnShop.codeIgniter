@@ -1,38 +1,141 @@
 $(function () {
+	// $("#emp-form").on("submit", function (e) {
+	// 	e.preventDefault();
+	// 	var yes = true;
+	// 	if (yes) {
+	// 		const form = document.getElementById("emp-form");
+	// 		const formData = new FormData(form);
+	// 		if (formData == null) {
+	// 			alert("ayoko na");
+	// 		}
+	// 		formData.append("key1", "value1");
+	// 		formData.append("key2", "value2");
+	// 		for (const value of formData.keys()) {
+	// 			console.log(value);
+	// 		}
+	// 	}
+	// });
+
 	$("#emp-form").on("submit", function (e) {
 		e.preventDefault();
+		// trimInputFields();
 
 		// remove disabled input
 		// $("#form_add input, select, textarea").prop(disabled, false);
 
-		const output = document.getElementById("output");
+		// const output = document.getElementById("output");
 
 		// for (const [key, value] of formData) {
 		// 	console.log("je");
 		// }
-		var form_data = new FormData(this);
+		// var form_data = new FormData(this);
 
-		if ($("#emp-form").parsley().validate()) {
-			// formData.append("user_email", $("#user_email").val());
-			// formData.append("user_email", $("#user_email").val());
+		// if ($("#emp-form").parsley().validate())
+
+		var yes = true;
+		if (yes) {
+			const form = document.getElementById("emp-form");
+			const formData = new FormData(form);
+			const searchParams = new URLSearchParams();
+			const formData1 = new FormData();
+			// for (let i = 0; i < parts.length; i++) {
+			// 	const part = parts[i];
+			// 	// will be: { filename: 'A.txt', type: 'text/plain', data: <Buffer 41 41 41 41 42 42 42 42> }
+			// }
+			// for (const pair of formData) {
+			// 	for (const value of formData.values()) {
+			// 		searchParams.append(pair[value]);
+			// 	}
+			// }
+			formData1.append("user_email", $("#user_email").val());
+			formData1.append("user_name", $("#user_name").val());
+			formData1.append("user_type", $("#user_type").val());
+			// formData1.append("user_password", $("#user_password").val());
+			formData1.append("user_password", "password");
+			formData1.append(
+				"employee_credentials[0][em_firstName]",
+				$("#em_firstName").val()
+			);
+			formData1.append(
+				"employee_credentials[0][em_middleName]",
+				$("#em_middleName").val()
+			);
+			formData1.append(
+				"employee_credentials[0][em_lastName]",
+				$("#em_lastName").val()
+			);
+			formData1.append(
+				"employee_credentials[0][profile_pic]",
+				$("#profile_pic").val()
+			);
+			formData1.append("employee_credentials[0][em_sex]", $("#em_sex").val());
+			formData1.append(
+				"employee_credentials[0][em_street]",
+				$("#em_street").val()
+			);
+			formData1.append(
+				"employee_credentials[0][em_brgy]",
+				$("#province").val()
+			);
+			formData1.append(
+				"employee_credentials[0][em_houseNo]",
+				$("#em_houseNo").val()
+			);
+			formData1.append("employee_credentials[0][em_city]", $("#city").val());
+			formData1.append(
+				"employee_credentials[0][em_zipcode]",
+				$("#em_zipcode").val()
+			);
+			// formData1.append("employee_credentials[0][em_hireDate]");
+			formData1.append(
+				"employee_credentials[0][em_birthDate]",
+				$("#hiredate").val()
+			);
+			formData1.append(
+				"employee_credentials[0][em_hireDate]",
+				$("#bday").val()
+			);
+			formData1.append(
+				"employee_credentials[0][em_contactNo]",
+				$("#em_contactNo").val()
+			);
+
+			formData1.append(
+				"employee_credentials[0][em_contactNo]",
+				[$("#em_contactNo").val(), " ", " hey	"].join(" ")
+			);
+
+			function urlencodeFormData(fd) {
+				var s = "";
+				function encode(s) {
+					return encodeURIComponent(s).replace(/%20/g, "+");
+				}
+				for (var pair of fd.entries()) {
+					if (typeof pair[1] == "string") {
+						s += (s ? "&" : "") + encode(pair[0]) + "=" + encode(pair[1]);
+					}
+				}
+				return s;
+			}
+
+			formData.append("user_email", $("#user_email").val());
+			formData.append("user_email", $("#user_email").val());
 			if ($("#uuid").val() == " ") {
-				// for (const value of formData.values()) {
-				// 	console.log(value);
-				// }
+				for (const value of formData.values()) {
+					console.log(value);
+				}
 				alert("hello");
+				// form_data.append("password", "P@ssw0rd");
+				// form_data.append("c_password", "P@ssword");
 				$.ajax({
 					url: apiURL + "user_credentials/employee",
 					type: "POST",
-					data: {
-						user_email: $("#user_email").val(),
-						user_password: $("#user_password").val(),
-						user_type: $("#user_type").val(),
-						user_name: $("#user_name").val(),
-					},
+					data: urlencodeFormData(formData1),
 					dataType: "json",
+					// contentType: application / x - www - form - urlencodeFormData,
 					// contentType: false,
-					// processData: false,
-					// cache: false,
+					processData: false,
+					cache: false,
 					success: function (data) {
 						// if (data.success) {
 						alert("sucess");
@@ -42,6 +145,9 @@ $(function () {
 							"src",
 							"https://avatars.dicebear.com/api/bottts/smile.svg"
 						);
+						// } else {
+						// 	notification("error", "Error!", data.message);
+						// }
 					},
 					error: function ({ responseJSON }) {
 						alert("error");
@@ -56,6 +162,7 @@ $(function () {
 				});
 			}
 		}
+
 		// $.ajax({
 		// 	url: apiURL + "user_credentials/employee",
 		// 	type: "POST",
@@ -133,10 +240,10 @@ $(function () {
 			},
 		});
 
-		$("#emp-table").dataTable().fnClearTable();
-		$("#emp-table").dataTable().fnDraw();
-		$("#emp-table").dataTable().fnDestroy();
-		$("#emp-table").dataTable({
+		$("#	table").dataTable().fnClearTable();
+		$("#	table").dataTable().fnDraw();
+		$("#	table").dataTable().fnDestroy();
+		$("#	table").dataTable({
 			responsive: true,
 			serverSide: true,
 			order: [[0, "asc"]],
