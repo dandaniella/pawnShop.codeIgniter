@@ -36,7 +36,7 @@ $(function () {
 					success: function (data) {
 						// if (data.success) {
 						alert("sucess");
-						// notification("success", "Success!", data.message);
+						notification("success", "Success!", data.message);
 						formReset();
 						$("#photo_path_placeholder").attr(
 							"src",
@@ -138,10 +138,10 @@ $(function () {
 			},
 		});
 
-		$("#emp-table").dataTable().fnClearTable();
-		$("#emp-table").dataTable().fnDraw();
-		$("#emp-table").dataTable().fnDestroy();
-		$("#emp-table").dataTable({
+		$("#emp").dataTable().fnClearTable();
+		$("#emp").dataTable().fnDraw();
+		$("#emp").dataTable().fnDestroy();
+		$("#emp").dataTable({
 			responsive: true,
 			serverSide: true,
 			order: [[0, "asc"]],
@@ -327,7 +327,7 @@ loadItems = () => {
 		dataType: "json",
 		ContentType: "application/x-www-form-urlencoded",
 		success: function (data) {
-			alert(data.error);
+			// alert(data.error);
 			if (!data.error) {
 				$("#em_sex").empty();
 

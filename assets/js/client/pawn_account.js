@@ -32,12 +32,12 @@ $(function () {
 		}
 	});
 
-	loadProduct = () => {
+	loadAccounts = () => {
 		// alert($("#search").val());
 		//no validate
 		$("#product-list").empty();
 		$.ajax({
-			url: apiURL + "login/sale",
+			url: apiURL + "client/sale",
 			type: "GET",
 			data: {
 				title: $("#search").val() ? $("#search").val() : $("#search2").val(),
@@ -94,5 +94,5 @@ $(function () {
 		});
 	};
 
-	loadProduct();
+	loadAccounts();
 });

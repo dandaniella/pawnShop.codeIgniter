@@ -135,13 +135,16 @@
                                     </ol>
                                     <div class="carousel-inner" role="listbox">
                                         <div class="carousel-item active">
-                                            <img class="d-block img-fluid" src="<?php echo base_url('assets') ?>/images/small/img-3.jpg" alt="First slide" style="height: 15vh">
+                                            <img class="d-block img-fluid" src="<?php echo base_url('assets') ?>/images/banner/Banner2 .jpg" alt="First slide" style="height: 40vh; width:100%;">
                                         </div>
                                         <div class="carousel-item">
-                                            <img class="d-block img-fluid" src="<?php echo base_url('assets') ?>/images/small/img-2.jpg" alt="Second slide" style="height: 15vh">
+                                            <img class="d-block img-fluid" src="<?php echo base_url('assets') ?>/images/banner/Banner4 .jpg" alt="First slide" style="height: 40vh; width:100%;">
                                         </div>
                                         <div class="carousel-item">
-                                            <img class="d-block img-fluid" src="<?php echo base_url('assets') ?>/images/small/img-1.jpg" alt="Third slide" style="height: 15vh">
+                                            <img class="d-block img-fluid" src="<?php echo base_url('assets') ?>/images/banner/Banner1 .jpg" alt="First slide" style="height: 40vh; width:100%;">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block img-fluid" src="<?php echo base_url('assets') ?>/images/banner/Banner3 .jpg" alt="First slide" style="height: 40vh; width:100%;">
                                         </div>
                                     </div>
                                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
@@ -158,94 +161,80 @@
                     </div>
 
 
-                    <!-- <div class="row mb-3">
-                            <div class="col-xl-4 col-sm-6">
-                                <div class="mt-2">
-                                    <h5>Clothes</h5>
-                                </div>
-                            </div>
-                            <<div class="col-lg-8 col-sm-6">
-                                <form class="mt-4 mt-sm-0 float-sm-end d-sm-flex align-items-center">
-                                    <div class="search-box me-2">
-                                        <div class="position-relative">
-                                            <input type="text" id="search" oninput="loadProduct()" class="form-control border-0" placeholder="Search...">
-                                            <i class="bx bx-search-alt search-icon"></i>
-                                        </div>
+                    <div class="row mb-3">
+
+                        <<div class="col-lg-8 col-sm-6">
+                            <form class="mt-4 mt-sm-0 float-sm-end d-sm-flex align-items-center">
+                                <div class="search-box me-2">
+                                    <div class="position-relative">
+                                        <input type="text" id="search2" oninput="loadProduct()" class="form-control border-0" placeholder="Search...">
+                                        <i class="bx bx-search-alt search-icon"></i>
                                     </div>
-                                    <ul class="nav nav-pills product-view-nav justify-content-end mt-3 mt-sm-0">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" href="#"><i class="bx bx-grid-alt"></i></a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#"><i class="bx bx-list-ul"></i></a>
-                                        </li>
-                                    </ul>
-
-
-                                </form>
-                            </div> 
-                        </div> -->
-
-                    <!-- product list start -->
-                    <div class="row" id="product-list">
-
-
-
-                    </div>
-                    <!-- end row -->
-
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <ul class="pagination pagination-rounded justify-content-center mt-3 mb-4 pb-1">
-                                <li class="page-item disabled">
-                                    <a href="#" class="page-link"><i class="mdi mdi-chevron-left"></i></a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link" onclick="return hello (1);">1</a>
-                                </li>
-                                <li class="page-item active">
-                                    <a href="#" class="page-link">2</a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link">3</a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link">4</a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link">5</a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link"><i class="mdi mdi-chevron-right"></i></a>
-                                </li>
-                            </ul>
-                        </div>
+                                </div>
+                            </form>
                     </div>
                 </div>
-            </div>
-            <!-- end row -->
 
-        </div> <!-- container-fluid -->
-    </div>
-    <!-- End Page-content -->
+                <!-- product list start-->
+                <div class="row" id="product-list">
 
 
-    <footer class="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-6">
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script> © Skote.
+
                 </div>
-                <div class="col-sm-6">
-                    <div class="text-sm-end d-none d-sm-block">
-                        Design & Develop by Themesbrand
+                <!--  end row -->
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="pagination pagination-rounded justify-content-center mt-3 mb-4 pb-1">
+                            <li class="page-item disabled">
+                                <a href="#" class="page-link"><i class="mdi mdi-chevron-left"></i></a>
+                            </li>
+                            <li class="page-item">
+                                <a href="#" class="page-link">1</a>
+                            </li>
+                            <li class="page-item active">
+                                <a href="#" class="page-link">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a href="#" class="page-link">3</a>
+                            </li>
+                            <li class="page-item">
+                                <a href="#" class="page-link">4</a>
+                            </li>
+                            <li class="page-item">
+                                <a href="#" class="page-link">5</a>
+                            </li>
+                            <li class="page-item">
+                                <a href="#" class="page-link"><i class="mdi mdi-chevron-right"></i></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+        <!-- end row -->
+
+    </div> <!-- container-fluid -->
+</div>
+<!-- End Page-content -->
+
+
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <script>
+                    document.write(new Date().getFullYear())
+                </script> © Skote.
+            </div>
+            <div class="col-sm-6">
+                <div class="text-sm-end d-none d-sm-block">
+                    Design & Develop by Themesbrand
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 </div>
 <!-- end main content-->
 

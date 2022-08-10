@@ -154,14 +154,15 @@
               </a>
               <ul class="sub-menu" aria-expanded="true">
                 <li>
-                  <a href="javascript: void(0);" class="has-arrow" key="t-vertical">
+                  <a href="<?php echo base_url('SystemSetup/users') ?>" key="t-vertical">
 
                     <i class="fas fa-minus"></i>
-                    <span key="t-layouts">User Credentials </span></a>
-                  <ul class="sub-menu" aria-expanded="true">
-                    <li><a href="layouts-horizontal.html" key="t-horizontal">Employee</a></li>
+                    <span key="t-layouts">User Credentials </span>
+                  </a>
+                  <!-- <ul class="sub-menu" aria-expanded="true">
+                    <li><a href="<?php echo base_url('SystemSetup/users') ?>" key="t-horizontal">Employee</a></li>
                     <li><a href="layouts-hori-topbar-light.html" key="t-topbar-light">Client</a></li>
-                  </ul>
+                  </ul> -->
                 </li>
                 <li>
                   <a href="javascript: void(0);" class="has-arrow waves-effect">

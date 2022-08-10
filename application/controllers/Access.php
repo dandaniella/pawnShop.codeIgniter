@@ -34,6 +34,7 @@ class Access extends CI_Controller
                 $this->session->set_userdata(
                     array(
                         'TOKEN' => $_GET['token'],
+                        'USER_ID' =>  $_GET['user_id'],
                         'USER_NAME' =>  $_GET['user_name'],
                         'USER_EMAIL' =>  $_GET['user_email'],
                         'USER_TYPE' =>  $_GET['user_type'],
@@ -45,6 +46,7 @@ class Access extends CI_Controller
                 $this->session->set_userdata(
                     array(
                         'TOKEN' => $_GET['token'],
+                        'USER_ID' =>  $_GET['user_id'],
                         'USER_NAME' =>  $_GET['user_name'],
                         'USER_EMAIL' =>  $_GET['user_email'],
                         'USER_TYPE' =>  $_GET['user_type'],

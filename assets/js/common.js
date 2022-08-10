@@ -17,7 +17,6 @@ let button = document.querySelector(".submit");
 // });
 
 formReset = (action = "hide") => {
-	alert("hello");
 	if (action == "hide") {
 		$(".form-id")[0].reset();
 	}

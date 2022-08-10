@@ -19,7 +19,7 @@ $(function () {
 				// for (const value of formData.values()) {
 				// 	console.log(value);
 				// }
-				// alert("hello");
+				alert("hello");
 				$.ajax({
 					url: apiURL + "user_credentials/employee",
 					type: "POST",
@@ -36,7 +36,7 @@ $(function () {
 					success: function (data) {
 						// if (data.success) {
 						alert("sucess");
-						// notification("success", "Success!", data.message);
+						notification("success", "Success!", data.message);
 						formReset();
 						$("#photo_path_placeholder").attr(
 							"src",
@@ -44,7 +44,7 @@ $(function () {
 						);
 					},
 					error: function ({ responseJSON }) {
-						// alert("error");
+						alert("error");
 						// $.ajax({
 						// 	headers: {
 						// 		Accept: "application/json",
@@ -124,31 +124,24 @@ $(function () {
 		alert("hello");
 	};
 
-	infoData = (id, type) => {
-		//3 for deactivation
-		alert("info");
-	};
-
 	loadTable = () => {
 		$.ajaxSetup({
 			headers: {
 				Accept: "application/json",
-				Authorization: "Bearer " + token,
+				// Authorization: "Bearer " + token,
 				ContentType: "application/x-www-form-urlencoded",
 			},
 		});
 
-		$("#emp-table").dataTable().fnClearTable();
-		$("#emp-table").dataTable().fnDraw();
-		$("#emp-table").dataTable().fnDestroy();
-		$("#emp-table").dataTable({
+		$("#user").dataTable().fnClearTable();
+		$("#user").dataTable().fnDraw();
+		$("#user").dataTable().fnDestroy();
+		$("#user").dataTable({
 			responsive: true,
 			serverSide: true,
 			order: [[0, "asc"]],
 			aLengthMenu: [5, 10, 20, 30, 40, 50, 100],
-			buttons: ["copy", "csv", "excel", "pdf", "print"],
 			aoColumns: [
-				{ sClass: "text-left" },
 				{ sClass: "text-left" },
 				{ sClass: "text-left" },
 				{ sClass: "text-left" },
@@ -156,158 +149,82 @@ $(function () {
 			],
 			columns: [
 				{
+					data: "user_id",
+					name: "user_id",
+					searchable: true,
+					width: "20%",
+					className: "dtr-control",
+				},
+				{
 					data: "user_name",
 					name: "user_name",
 					searchable: true,
-					width: "30%",
+					width: "20%",
 					className: "dtr-control",
 				},
 				{
 					data: "user_email",
 					name: "user_email",
 					searchable: true,
-					width: "30%",
+					width: "20%",
 					className: "dtr-control",
 				},
 				{
 					data: "user_status",
 					name: "user_status",
 					searchable: true,
-					width: "30%",
-					className: "dtr-control",
-				},
-				{
-					data: "user_type",
-					name: "user_type",
-					searchable: true,
-					width: "10%",
+					width: "20%",
 					className: "dtr-control",
 				},
 				{
 					data: "user_id",
 					name: "user_id",
-					// searchable: true,
-					width: "10%",
+					width: "30%",
 					className: "dtr-control",
 				},
+				// {
+				// 	data: "user_email",
+				// 	name: "user_email",
+				// 	searchable: true,
+				// 	width: "30%",
+				// 	className: "dtr-control",
+				// },
 			],
 			ajax: {
 				url: apiURL + "user_credentials/datatables",
+				// Authorization: "Bearer " + token,
 				type: "GET",
 				ContentType: "application/x-www-form-urlencoded",
 			},
 			fnRowCallback: function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-				// if(aData["user_type"] == "Client") contin;
-				let buttons = "";
-				let swicth = "";
+				let view = "";
+				let edit = "";
+				let aDelete = "";
 
-				// buttons +=
-				// 	'<button type="button" onClick = "return editData(\`' +
-				// 	aData["user_name"] +
-				// 	`\`,0)" class="btn btn-light" >EDIT<i class ="bx bx-info-circle font-size-16 align-middle></i></button>`;
+				view +=
+					'<button type= "button" onClick = "return editData(\'' +
+					aData["id"] +
+					'\',0)" class="btn btn-warning" >VIEW<i class ="bx bx-info-circle font-size-13 align-middle></i></button>';
 
-				buttons +=
-					`
-					<button type="button" class="btn btn-primary" onClick="return infoData(\'` +
-					aData["user_id"] +
-					`\',0)"><i class="bx bx-info-circle"></i></button>	`;
-				buttons +=
-					`
+				edit +=
+					'<button type= "button" onClick = "return editData(\'' +
+					aData["id"] +
+					'\',0)" class="btn btn-primary" >EDIT<i class ="bx bx-info-circle font-size-13 align-middle></i></button>';
+				aDelete +=
+					'<button type= "button" onClick = "return editData(\'' +
+					aData["id"] +
+					'\',0)" class="btn btn-danger" >DELETE<i class ="bx bx-info-circle font-size-13 align-middle></i></button>';
 
-			
-				<button type="button" class="btn btn-primary" onClick="return editData(\'` +
-					aData["user_id"] +
-					`\',0)"><i class="bx bx-edit-alt"></i></button>	`;
-				if (aData["user_status"] == "Active") {
-					swicth += `  <div class="form-check form-switch form-switch-lg mb-3" dir="ltr">
-				<input class="form-check-input" type="checkbox" id="SwitchCheckSizelg" checked>
-				<label class="form-check-label" for="SwitchCheckSizelg"></label>
-				`;
-				} else {
-					swicth += `  <div class="form-check form-switch form-switch-lg mb-3" dir="ltr">
-				<input class="form-check-input" type="checkbox" id="SwitchCheckSizelg">
-				<label class="form-check-label" for="SwitchCheckSizelg"></label>
-				`;
-				}
+				$("td:eq(0)", nRow).html(aData["user_id"]);
+				$("td:eq(1)", nRow).html(aData["user_name"]);
+				$("td:eq(2)", nRow).html(aData["user_email"]);
+				$("td:eq(3)", nRow).html(aData["user_status"]);
+				$("td:eq(4)", nRow).append(view);
+				$("td:eq(4)", nRow).append(edit);
+				$("td:eq(4)", nRow).append(aDelete);
 
-				$("td:eq(0)", nRow).html(aData["user_name"]);
-				$("td:eq(1)", nRow).html(aData["user_email"]);
-				$("td:eq(2)", nRow).html(aData["user_type"]);
-				$("td:eq(3)", nRow).html(swicth);
-				$("td:eq(4)", nRow).html(buttons);
-
+				// $("td:eq(1)", nRow).html(buttons);
 				// $("span:eq(1)", nRow).html(aData["user_email"]);
-			},
-			drawCallBack: function (settings) {
-				// alert("heel");
-			},
-		});
-
-		$("#datatable-buttons").dataTable().fnClearTable();
-		$("#datatable-buttons").dataTable().fnDraw();
-		$("#datatable-buttons").dataTable().fnDestroy();
-		$("#datatable-buttons").dataTable({
-			responsive: true,
-			serverSide: true,
-			order: [[0, "asc"]],
-			aLengthMenu: [2, 10, 20, 30, 40, 50, 100],
-			buttons: ["copy", "csv", "excel", "pdf", "print"],
-			aoColumns: [
-				{ sClass: "text-left" },
-				{ sClass: "text-left" },
-				{ sClass: "text-left" },
-			],
-			columns: [
-				{
-					data: "em_fullName",
-					name: "em_fullName",
-					searchable: true,
-					width: "10%",
-					className: "dtr-control",
-				},
-				{
-					data: "em_id",
-					name: "em_id",
-					searchable: true,
-					width: "10%",
-					className: "dtr-control",
-				},
-				{
-					data: "em_hireDate",
-					name: "em_hireDate",
-					searchable: true,
-					width: "10%",
-					className: "dtr-control",
-				},
-			],
-			ajax: {
-				url: apiURL + "employee/datatables",
-				type: "GET",
-				ContentType: "application/x-www-form-urlencoded",
-			},
-			fnRowCallback: function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-				let buttons = "";
-				let swicth = "";
-
-				buttons +=
-					`<button type="button" class="btn btn-primary" onClick="return editData(\'` +
-					aData["em_id"] +
-					`\',0)"><i class="bx bx-edit-alt"></i></button>`;
-
-				buttons +=
-					`<button type="button" class="btn btn-primary" onClick="return editData(\'` +
-					aData["em_id"] +
-					`\',0)"><i class="bx bx-edit-alt"></i></button>`;
-
-				// swicth += `  <div class="form-check form-switch form-switch-lg mb-3" dir="ltr">
-				// 	 		<input class="form-check-input" type="checkbox" id="SwitchCheckSizelg" checked>
-				// 	 		<label class="form-check-label" for="SwitchCheckSizelg"></label>
-				// 	 		</div>`;
-
-				$("td:eq(0)", nRow).html(aData["em_fullName"]);
-				$("td:eq(1)", nRow).html(aData["em_hireDate"]);
-				// $("td:eq(2)", nRow).html(buttons);
-				// $("td:eq(3)", nRow).html(swicth);
 			},
 			drawCallBack: function (settings) {
 				// alert("heel");
@@ -316,7 +233,6 @@ $(function () {
 	};
 
 	loadTable();
-	// loadItems();
 });
 
 loadItems = () => {

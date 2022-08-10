@@ -7,7 +7,7 @@
     ================================================== -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Infinity 2.0</title>
+    <title>ePawnShop | Group 5</title>
 
     <script>
         document.documentElement.classList.remove('no-js');
@@ -399,7 +399,7 @@
                                  color: white;">
                                     Click shop more for a complete list of
                                     the things we accept and have for sale.</p>
-                                <a class="smoothscroll btn btn--stroke s-intro__more-btn" href="#about">
+                                <a class="smoothscroll btn btn--stroke s-intro__more-btn" onclick="window.location='<?php echo base_url('Home/items') ?>'">
                                     Shop More
                                 </a>
                             </div>

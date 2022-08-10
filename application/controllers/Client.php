@@ -21,11 +21,11 @@ class Client extends CI_Controller
 	 */
 
 
-	// function __construct()
-	// {
-	// 	parent::__construct();
-	// 	($this->session->userdata('TOKEN')) ? null : redirect('Home/items');
-	// }
+	function __construct()
+	{
+		parent::__construct();
+		($this->session->userdata('TOKEN')) ? null : redirect('/');
+	}
 
 	public function items()
 	{

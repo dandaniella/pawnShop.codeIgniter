@@ -4,7 +4,7 @@
 <head>
 
   <meta charset="utf-8" />
-  <title>Coming Soon | Skote - Admin & Dashboard Template</title>
+  <title>ePawnShop | Group 5</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
   <meta content="Themesbrand" name="author" />
@@ -132,9 +132,10 @@
           <button type="button" class="btn header-item waves-effect h-100" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: black;">
             <img class="rounded-circle header-profile-user" src="<?php echo base_url('assets') ?>/images/users/avatar-1.jpg" alt="Header Avatar">
             <span class="d-none d-xl-inline-block ms-1" style="
-              font-size:1.2rem;
+              font-size:1rem;
+              padding: 20px;
               color:white;
-              letter-spacing: 2px"> LOGIN</span>
+              "> <?php echo $this->session->userdata('USER_NAME') ?></span>
             <i class="mdi mdi-chevron-down d-none d-xl-inline-block" style="color:white;  font-size:1.2rem;"></i>
           </button>
           <div class="dropdown-menu dropdown-menu-end">

@@ -14,17 +14,18 @@ $(function () {
 				},
 				dataType: "json",
 				success: function (data) {
-					console.log(data);
-
 					localStorage.setItem("TOKEN", data.token);
 
 					// save session data in php
 					let session_data = "";
 
 					session_data += "token=" + data.token;
+					session_data += "&user_id=" + data.data.user_id;
 					session_data += "&user_name=" + data.data.user_name;
 					session_data += "&user_email=" + data.data.user_email;
 					session_data += "&user_type=" + data.data.user_type;
+
+					localStorage.setItem("USER_ID", data.data.user_id);
 
 					window.location.replace(baseURL + "Access/oAuth?" + session_data);
 				},

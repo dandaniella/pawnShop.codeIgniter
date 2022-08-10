@@ -116,11 +116,20 @@ class SystemSetup extends CI_Controller
 		$this->load->view('template/footer');
 	}
 
-	public function employee()
+	public function users()
 	{
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar');
 		$this->load->view('pages/user_management/employee');
+		$this->load->view('template/footer');
+		$this->load->view('pages/user_management/footer');
+	}
+
+	public function employee()
+	{
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('emp_management/emp_management');
 		$this->load->view('template/footer');
 		$this->load->view('pages/user_management/footer');
 	}

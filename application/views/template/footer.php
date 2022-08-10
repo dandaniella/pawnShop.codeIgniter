@@ -4,15 +4,16 @@
             <div class="col-sm-6">
                 <script>
                     document.write(new Date().getFullYear())
-                </script> © Skote.
+                </script> © ePawn Shop Philippines.
             </div>
             <div class="col-sm-6">
                 <div class="text-sm-end d-none d-sm-block">
-                    Design & Develop by Themesbrand
+                    Design & Develop by Group 5
                 </div>
             </div>
         </div>
     </div>
+
 </footer>
 </div>
 <!-- end main content-->
@@ -74,6 +75,8 @@
 
 <!-- user js -->
 <script src="<?php echo base_url('assets') ?>/js/user_management/employee.js"></script>
+<!-- emp js -->
+<script src="<?php echo base_url('assets') ?>/js/employee_management/emp_management.js"></script>
 
 
 <script>
